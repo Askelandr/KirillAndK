@@ -112,24 +112,3 @@ function SliderFactory(array) {
 //       return newSlider;
 //     },
 //   };
-
-function Dog(n) {
-  this.name = n;
-
-  this.voice = function () {
-    console.log("Привет,", this.name, "! Тебе", this.age, "лет?");
-  };
-}
-
-let gav1 = new Dog("Шарик");
-let gav2 = new Dog("Бобик");
-let gav3 = new Dog("Артемон");
-let gav4 = new Dog("Барбос");
-gav1.voice();
-gav2.voice();
-gav3.voice();
-gav4.voice();
-gav1.name = "Парамон";
-gav1.voice();
-gav1.age = 10;
-gav1.voice();
