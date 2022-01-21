@@ -1,0 +1,92 @@
+/* .first-name-inpu {
+}
+.last-name-input {
+}
+.address-input {
+} */
+.default-input {
+  border: aquamarine 5px solid;
+  padding: 3px;
+  border-radius: 10px;
+}
+.error-input {
+  border-color: red;
+}
+.button-input {
+  background-color: blueviolet;
+  margin: 5px;
+  font-size: 15px;
+}
+
+/* Секция калькулятора */
+.calc-text {
+  color: blueviolet;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.calk-section {
+  border: brown 2px solid;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: rgb(223, 197, 197);
+}
+.del {
+  text-align: center;
+}
+.calk-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  padding-bottom: 30px;
+  border-bottom: brown 1px solid;
+}
+.button-click {
+  width: 21%;
+  font-size: 30px;
+  margin-top: 20px;
+  color: blueviolet;
+  background-color: rgb(201, 217, 247);
+  border: blueviolet 2px solid;
+  border-radius: 5px;
+}
+.calk-input {
+  display: flex;
+
+  justify-content: space-around;
+  padding-top: 30px;
+}
+.input-click {
+  border: blueviolet 2px solid;
+  width: 30%;
+  color: blueviolet;
+  font-size: 30px;
+  border-radius: 5px;
+}
+.result-section {
+  width: 100%;
+  padding: 30px 0 0 0;
+}
+.calk-result {
+  margin-left: 50%;
+  font-size: 30px;
+  color: blueviolet;
+}
+.operation {
+  color: blueviolet;
+  font-size: 30px;
+}
+
+/* Секция слайдера */
+.is-slider {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 30px 0;
+}
+.img-slider {
+  object-fit: fill;
+  width: 700px;
+  height: 300px;
+}
