@@ -7,10 +7,12 @@ function GetRoverArray(date, sol, rover, cam) {
   this.getsol = sol;
   this.getRover = rover;
   this.getCam = cam;
-  this.getUrlApi = `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.getRover}/photos?sol=${this.getsol}&camera=${this.getCam}&api_key=${this.key}`;
+  this.getUrlApi = [
+    `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.getRover}/photos?sol=${this.getsol}&camera=${this.getCam}&api_key=${this.key}`,
+  ];
   //Method for getting Promis
   this.getPromis = async function () {
-    let response = await fetch(this.getUrlApi);
+    let response = await fetch(this.getUrlApi[0]);
     if (response.ok) {
       let data = await response.json();
       this.imgSliderArray = data.photos;
