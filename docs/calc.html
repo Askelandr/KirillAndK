@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Космос близко</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="./index.html">Марсоходы</a></h1>
+    </header>
+    <!-- Секция калькулятора -->
+    <div class="calk-section">
+      <h1 class="calc-text">КАЛЬКУЛЯТОР</h1>
+      <div class="calk-button">
+        <button class="button-click" id="plusButton">+</button>
+        <button class="button-click" id="minusButton">-</button>
+        <button class="button-click" id="divisionButton">/</button>
+        <button class="button-click" id="multiplyButton">*</button>
+        <button class="button-click del" id="dellButton">c</button>
+      </div>
+      <div class="calk-input">
+        <input
+          class="input-click"
+          type="text"
+          id="first-number"
+          value=""
+          placeholder="Первое число"
+        />
+        <div class="operation" id="operation"></div>
+        <input
+          class="input-click"
+          type="text"
+          id="second-number"
+          value=""
+          placeholder="Второе число"
+        />
+      </div>
+      <div class="result-section">
+        <div class="calk-result" id="calk-result">0</div>
+      </div>
+    </div>
+
+    <!-- КАЛЬКУЛЯТОР -->
+    <script src="js/calc.js"></script>
+  </body>
+</html>
