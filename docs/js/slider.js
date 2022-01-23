@@ -43,7 +43,7 @@ function SliderFactory(array) {
   };
   this.putRightButtonSlider = function (event) {
     this.a++;
-    console.log(this.imgSliderArray);
+    // console.log(this.imgSliderArray);
     this.imgSlider.src = this.imgSliderArray[this.a];
     this.leftButton.disabled = false;
     if (this.a === this.imgSliderArray.length - 1) {
