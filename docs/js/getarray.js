@@ -15,6 +15,7 @@ function GetRoverArray(date, sol, rover, cam) {
     let response = await fetch(this.getUrlApi[0]);
     if (response.ok) {
       let data = await response.json();
+      console.log(data);
       this.imgSliderArray = data.photos;
 
       return this.imgSliderArray;
