@@ -49,19 +49,18 @@ function GetRoverArray(date, sol, rover, cam) {
    * The method returns an array of links to the photo
    * @returns array of links to the photo
    */
-  this.getArray = function () {
+  this.getArray = () => {
     let that = this;
-    let sliderArray = [];
-    that.getPromis().then(function (fulfilled) {
+    that.getPromis().then((fulfilled) => {
       let imgSliderArray = fulfilled;
       //i = 0, lengh = imgSliderArray.length; i < lengh; i++
       for (let item of imgSliderArray) {
         let arrayImg = item;
 
-        sliderArray.push(arrayImg.img_src);
+        this.imgSliderArray.push(arrayImg.img_src);
       }
     });
-    this.imgSliderArray = sliderArray;
+
     return this.imgSliderArray;
   };
 }
