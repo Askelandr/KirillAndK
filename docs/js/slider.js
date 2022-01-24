@@ -1,6 +1,10 @@
 `use strict`;
 
 //Slider using the constructor function
+/**
+ * @constructor
+ * @param {array} array - array of links to the photo@
+ */
 function SliderFactory(array) {
   // this.imgSliderArray = [];
 
@@ -10,6 +14,11 @@ function SliderFactory(array) {
   this.imgSlider = null;
 
   this.a = 0;
+  /**
+   * The method launches a slider with the necessary data
+   * @param {string} id - id DIV element slider
+   * @param {string} url - url for the initial image in the slider
+   */
   this.start = function (id, url) {
     let elemId = document.querySelector("#" + id);
 
@@ -28,9 +37,11 @@ function SliderFactory(array) {
     this.leftButton.disabled = true;
 
     this.imgSlider.src = url;
-    // this.imgSliderArray[this.a];
-    // console.log(this.imgSlider.src);
   };
+  /**
+   * The function handles the event of pressing the left button
+   * @param {event} event
+   */
   this.putLeftButtonSlider = function (event) {
     this.a--;
     this.imgSlider.src = this.imgSliderArray[this.a];
@@ -40,6 +51,10 @@ function SliderFactory(array) {
       this.imgSlider.src = this.imgSliderArray[this.a];
     }
   };
+  /**
+   * The function handles the event of pressing the right button
+   * @param {*} event
+   */
   this.putRightButtonSlider = function (event) {
     this.a++;
     // console.log(this.imgSliderArray);

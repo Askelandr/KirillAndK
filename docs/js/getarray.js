@@ -1,5 +1,17 @@
 "use strict";
-
+/**
+ * The function creates an array with photos
+ * @constructor
+ * @param {string} date required date YYYY-MM-DD format
+ * @param {Number} sol martian sol . Countdown from the moment of landing
+ * @param {string} rover rover name Curiosity,opportunity,spirit
+ * @param {string} cam camera name
+ * @this {array} imgSliderArray - array of links to photos
+ * @this {string} key - key for API
+ * @this {string} getStartDate - date YYYY-MM-DD format
+ * @this {string} getEndDate - date YYYY-MM-DD format
+ * @this {array}  getUrlApi - URL array
+ */
 function GetRoverArray(date, sol, rover, cam) {
   this.imgSliderArray = [];
   this.key = "PGka1opQDcuPP3qIDr8TN2LkttJevZWu7DZOZJv3";
@@ -15,20 +27,28 @@ function GetRoverArray(date, sol, rover, cam) {
     `https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.getStartDate}&end_date=${this.getEndDate}&api_key=${this.key}`,
     `https://api.nasa.gov/EPIC/api/natural/date/${this.getDate}?api_key=${this.key}`,
   ];
-  //Method for getting Promis
+
+  /**
+   * Method for getting Promis
+   * @returns promis with an array of links
+   */
   this.getPromis = async function () {
     let response = await fetch(this.getUrlApi[0]);
     if (response.ok) {
       let data = await response.json();
       // console.log(data);
-      this.imgSliderArray = data.photos;
+      let imgPromisArray = data.photos;
 
-      return this.imgSliderArray;
+      return imgPromisArray;
     } else {
       alert("Error", response.status);
     }
   };
-  //Method for getting an array of photos
+
+  /**
+   * The method returns an array of links to the photo
+   * @returns array of links to the photo
+   */
   this.getArray = function () {
     let that = this;
     let sliderArray = [];
@@ -41,7 +61,7 @@ function GetRoverArray(date, sol, rover, cam) {
         sliderArray.push(arrayImg.img_src);
       }
     });
-
-    return sliderArray;
+    this.imgSliderArray = sliderArray;
+    return this.imgSliderArray;
   };
 }
