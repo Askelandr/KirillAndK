@@ -1,6 +1,6 @@
 `use strict`;
 //Initial photos of the rovers
-let curiosity = "./image/curiosity.jpg";
+let curiosity = "./image/Curiosity.jpg";
 let opportunity = "./image/opportunity.jpg";
 let spirit = "./image/spirit.jpg";
 // Data introduction for all sliders
