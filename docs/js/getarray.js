@@ -34,9 +34,9 @@ function GetRoverArray(date, sol, rover, cam) {
     let sliderArray = [];
     that.getPromis().then(function (fulfilled) {
       let imgSliderArray = fulfilled;
-
-      for (let i = 0, lengh = imgSliderArray.length; i < lengh; i++) {
-        let arrayImg = imgSliderArray[i];
+      //i = 0, lengh = imgSliderArray.length; i < lengh; i++
+      for (let item of imgSliderArray) {
+        let arrayImg = item;
 
         sliderArray.push(arrayImg.img_src);
       }
