@@ -53,7 +53,7 @@ function SliderFactory(array) {
   };
   /**
    * The function handles the event of pressing the right button
-   * @param {*} event
+   * @param {event} event
    */
   this.putRightButtonSlider = function (event) {
     this.a++;
