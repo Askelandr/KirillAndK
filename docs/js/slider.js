@@ -10,7 +10,7 @@ function SliderFactory(array) {
   this.imgSlider = null;
 
   this.a = 0;
-  this.start = function (id) {
+  this.start = function (id, url) {
     let elemId = document.querySelector("#" + id);
 
     this.leftButton = elemId.querySelector("#left-button");
@@ -27,8 +27,7 @@ function SliderFactory(array) {
 
     this.leftButton.disabled = true;
 
-    this.imgSlider.src =
-      "http://mars.nasa.gov/mer/gallery/all/1/n/100/1N137056041EFF2002P1825L0M1-BR.JPG";
+    this.imgSlider.src = url;
     // this.imgSliderArray[this.a];
     // console.log(this.imgSlider.src);
   };

@@ -1,4 +1,8 @@
 `use strict`;
+//Initial photos of the rovers
+let curiosity = "./image/curiosity.jpg";
+let opportunity = "./image/opportunity.jpg";
+let spirit = "./image/spirit.jpg";
 // Data introduction for all sliders
 let putImgSlider1 = new GetRoverArray(
   "2021-11-10",
@@ -26,8 +30,8 @@ let slider1 = new SliderFactory(ImgSlider1);
 let slider2 = new SliderFactory(ImgSlider2);
 let slider3 = new SliderFactory(ImgSlider3);
 
-slider1.start("slider1");
+slider1.start("slider1", curiosity);
 
-slider2.start("slider2");
+slider2.start("slider2", opportunity);
 
-slider3.start("slider3");
+slider3.start("slider3", spirit);
