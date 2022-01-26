@@ -6,7 +6,7 @@ let spirit = "./image/spirit.jpg";
 // Data introduction for all sliders
 let putImgSlider1 = new GetRoverArray(
   0,
-  "2021-11-10",
+  "2021-03-31",
   2800,
   "Curiosity",
   "mast"
@@ -14,13 +14,13 @@ let putImgSlider1 = new GetRoverArray(
 console.log(putImgSlider1);
 let putImgSlider2 = new GetRoverArray(
   0,
-  "2021-11-10",
+  "2021-04-07",
   700,
   "opportunity",
   "navcam"
 );
 console.log(putImgSlider2);
-let putImgSlider3 = new GetRoverArray(0, "2021-11-10", 100, "spirit", "navcam");
+let putImgSlider3 = new GetRoverArray(0, "2021-10-08", 100, "spirit", "navcam");
 console.log(putImgSlider3);
 // Getting an array of photos for each slider
 let ImgSlider1 = putImgSlider1.getArray();

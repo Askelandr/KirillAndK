@@ -17,13 +17,13 @@ function GetRoverArray(urlNum, date, sol, rover, cam) {
   this.imgSliderArray = [];
   this.key = "PGka1opQDcuPP3qIDr8TN2LkttJevZWu7DZOZJv3";
   this.getDate = date;
-  this.getStartDate = "";
-  this.getEndDate = "";
+  this.getStartDate = "2021-01-01";
+  this.getEndDate = "2021-01-03";
   this.getsol = sol;
   this.getRover = rover;
   this.getCam = cam;
   this.arrayUrlNum = urlNum;
-  this.arrayData = [];
+  this.arrayData = {};
   this.getUrlApi = [
     `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.getRover}/photos?sol=${this.getsol}&camera=${this.getCam}&api_key=${this.key}`,
     `https://api.nasa.gov/planetary/apod?api_key=${this.key}&date=${this.getDate}`,
@@ -65,19 +65,48 @@ function GetRoverArray(urlNum, date, sol, rover, cam) {
    */
   this.getArray = () => {
     let that = this;
-    that.getData();
-    console.log(this.arrayData);
-    that.getPromis().then((fulfilled) => {
-      let imgSliderArray = fulfilled;
-      let sliderArray = imgSliderArray.photos;
-      //i = 0, lengh = imgSliderArray.length; i < lengh; i++
-      for (let item of sliderArray) {
-        let arrayImg = item;
+    this.arrayData = that.getData();
+    if (this.arrayUrlNum === 0) {
+      that.getPromis().then((fulfilled) => {
+        let imgSliderArray = fulfilled;
+        let sliderArray = imgSliderArray.photos;
+        //i = 0, lengh = imgSliderArray.length; i < lengh; i++
+        for (let item of sliderArray) {
+          let arrayImg = item;
 
-        this.imgSliderArray.push(arrayImg.img_src);
-      }
-    });
+          this.imgSliderArray.push(arrayImg.img_src);
+        }
+      });
+      return this.imgSliderArray;
+    } else if (this.arrayUrlNum === 1) {
+      that.getPromis().then((fulfilled) => {
+        let imgSliderArray = fulfilled;
+        let sliderArray = imgSliderArray;
+        console.log(sliderArray);
 
-    return this.imgSliderArray;
+        //i = 0, lengh = imgSliderArray.length; i < lengh; i++
+      });
+      return this.imgSliderArray;
+    } else if (this.arrayUrlNum === 2) {
+      that.getPromis().then((fulfilled) => {
+        let imgSliderArray = fulfilled;
+        let sliderArray = imgSliderArray;
+        console.log(sliderArray);
+
+        //i = 0, lengh = imgSliderArray.length; i < lengh; i++
+      });
+      return this.imgSliderArray;
+    } else if (this.arrayUrlNum === 3) {
+      that.getPromis().then((fulfilled) => {
+        let imgSliderArray = fulfilled;
+        let sliderArray = imgSliderArray;
+        console.log(sliderArray);
+
+        //i = 0, lengh = imgSliderArray.length; i < lengh; i++
+      });
+      return this.imgSliderArray;
+    } else {
+      console.log("Ввеена не верная ссылка на API");
+    }
   };
 }
