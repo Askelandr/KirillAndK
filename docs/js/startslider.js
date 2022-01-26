@@ -11,7 +11,7 @@ let putImgSlider1 = new GetRoverArray(
   "Curiosity",
   "mast"
 );
-
+console.log(putImgSlider1);
 let putImgSlider2 = new GetRoverArray(
   0,
   "2021-11-10",
@@ -19,9 +19,9 @@ let putImgSlider2 = new GetRoverArray(
   "opportunity",
   "navcam"
 );
-
+console.log(putImgSlider2);
 let putImgSlider3 = new GetRoverArray(0, "2021-11-10", 100, "spirit", "navcam");
-
+console.log(putImgSlider3);
 // Getting an array of photos for each slider
 let ImgSlider1 = putImgSlider1.getArray();
 let ImgSlider2 = putImgSlider2.getArray();

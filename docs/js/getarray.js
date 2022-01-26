@@ -23,6 +23,7 @@ function GetRoverArray(urlNum, date, sol, rover, cam) {
   this.getRover = rover;
   this.getCam = cam;
   this.arrayUrlNum = urlNum;
+  this.arrayData = [];
   this.getUrlApi = [
     `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.getRover}/photos?sol=${this.getsol}&camera=${this.getCam}&api_key=${this.key}`,
     `https://api.nasa.gov/planetary/apod?api_key=${this.key}&date=${this.getDate}`,
@@ -48,12 +49,24 @@ function GetRoverArray(urlNum, date, sol, rover, cam) {
     }
   };
 
+  this.getData = () => {
+    let that = this;
+    let i = this.arrayUrlNum;
+    return that.getPromis().then((resData) => {
+      this.arrayData = resData;
+      console.log(this.arrayData);
+      return this.arrayData;
+    });
+  };
+
   /**
    * The method returns an array of links to the photo
    * @returns array of links to the photo
    */
   this.getArray = () => {
     let that = this;
+    that.getData();
+    console.log(this.arrayData);
     that.getPromis().then((fulfilled) => {
       let imgSliderArray = fulfilled;
       let sliderArray = imgSliderArray.photos;
