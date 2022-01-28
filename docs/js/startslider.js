@@ -3,30 +3,27 @@
 let curiosity = "./image/Curiosity.jpg";
 let opportunity = "./image/opportunity.jpg";
 let spirit = "./image/spirit.jpg";
+let date = "2021-04-07";
 // Data introduction for all sliders
-let putImgSlider1 = new GetRoverArray(
-  0,
-  "2021-03-31",
-  2800,
-  "Curiosity",
-  "mast"
-);
-console.log(putImgSlider1);
-let putImgSlider2 = new GetRoverArray(
-  0,
-  "2021-04-07",
-  700,
-  "opportunity",
-  "navcam"
-);
-console.log(putImgSlider2);
-let putImgSlider3 = new GetRoverArray(0, "2021-10-08", 100, "spirit", "navcam");
-console.log(putImgSlider3);
+let putImgSlider1 = new GetDataArray(0, date, 2800, "Curiosity", "mast");
+
+let putImgSlider2 = new GetDataArray(0, date, 700, "opportunity", "navcam");
+
+let putImgSlider3 = new GetDataArray(0, date, 100, "spirit", "navcam");
+
+let putDataForDayFoto = new GetDataArray(1, date, 0, "", "");
+console.log(putDataForDayFoto);
 // Getting an array of photos for each slider
 let ImgSlider1 = putImgSlider1.getArray();
 let ImgSlider2 = putImgSlider2.getArray();
 let ImgSlider3 = putImgSlider3.getArray();
 
+imageDataDayFoto = putDataForDayFoto.getArray();
+setTimeout(() => {
+  console.log(imageDataDayFoto);
+}, 5000);
+
+console.log(ImgSlider3);
 // Uploading photos to all sliders
 let slider1 = new SliderFactory(ImgSlider1);
 let slider2 = new SliderFactory(ImgSlider2);

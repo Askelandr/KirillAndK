@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Космос близко</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="header"><a href="./calc.html">КАЛЬКУЛЯТОР</a></h2>
+      <h2 class="header"><a href="./index.html">ДОМОЙ</a></h2>
+    </header>
+    <h1>Фото дня с сервера NASA</h1>
+
+    <!-- Секция слайдера -->
+    <!--  Слайдер Curiosity -->
+    <div>
+      <h2>Фото дня</h2>
+      <div class="is-dayFoto" id="fotoDay">
+        <div class="in-dayFoto">
+          <input
+            type="date"
+            id="inputDate"
+            class="inputInDayFoto"
+            value="2021-04-07"
+          />
+          <button id="putBattonGetDate" class="buttonInDayFoto">
+            Ввести день
+          </button>
+          <h2 class="headerInDayFoto" id="headerInDayFoto">Заголовок</h2>
+          <img class="img-slider" id="img-slider" src="" alt="family foto" />
+          <h3 class="textInDayFoto" id="textInDayFoto">Описание фотографии</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/getarray.js"></script>
+  </body>
+</html>
