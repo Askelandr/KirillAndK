@@ -11,21 +11,10 @@ let putImgSlider2 = new GetDataArray(0, date, 700, "opportunity", "navcam");
 
 let putImgSlider3 = new GetDataArray(0, date, 100, "spirit", "navcam");
 
-let putDataForDayFoto = new GetDataArray(1, date, 0, "", "");
-console.log(putDataForDayFoto);
 // Getting an array of photos for each slider
 let ImgSlider1 = putImgSlider1.getArray();
 let ImgSlider2 = putImgSlider2.getArray();
 let ImgSlider3 = putImgSlider3.getArray();
-/**Вот в таком формате все работает, но мое мнение, что это не совсем правильно
- * ....нужно разобраться с асинхронностью....
- * ну т.е. я понимаю, что результат то я получил, но, мое мнение, что сделано это
- * не оптимально...
- */
-putDataForDayFoto.getArray();
-setTimeout(() => {
-  console.log(putDataForDayFoto.arrayData);
-}, 1000);
 
 console.log(ImgSlider3);
 // Uploading photos to all sliders
