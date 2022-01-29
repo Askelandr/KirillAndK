@@ -2,13 +2,18 @@
 /**
  * The class put photos and data on page
  * @constructor
- * @param {object} obj - obj from Api Nasa
+ *
  */
 class DayNasaFoto {
   constructor() {
     this.headerInDayFoto = null;
     this.imgSrs = null;
     this.textInDayFoto = null;
+    /**
+     * Method fills in the necessary components of the page with data
+     * @param {string} id - id
+     * @param {object} obj - obj from Api Nasa
+     */
     this.start = function (id, obj) {
       let elemId = document.querySelector("#" + id);
 
