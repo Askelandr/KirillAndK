@@ -17,11 +17,15 @@ console.log(putDataForDayFoto);
 let ImgSlider1 = putImgSlider1.getArray();
 let ImgSlider2 = putImgSlider2.getArray();
 let ImgSlider3 = putImgSlider3.getArray();
-
-imageDataDayFoto = putDataForDayFoto.getArray();
+/**Вот в таком формате все работает, но мое мнение, что это не совсем правильно
+ * ....нужно разобраться с асинхронностью....
+ * ну т.е. я понимаю, что результат то я получил, но, мое мнение, что сделано это
+ * не оптимально...
+ */
+putDataForDayFoto.getArray();
 setTimeout(() => {
-  console.log(imageDataDayFoto);
-}, 5000);
+  console.log(putDataForDayFoto.arrayData);
+}, 1000);
 
 console.log(ImgSlider3);
 // Uploading photos to all sliders
