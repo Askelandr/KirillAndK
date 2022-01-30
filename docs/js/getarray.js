@@ -124,7 +124,9 @@ class GetDataArray {
       });
       return this.imgSliderArray;
     } else {
-      console.log("Ввеена не верная ссылка на API");
+      console.log("Введена не верная ссылка на API");
     }
   };
+  getDataForTakeApi = () => {};
+  putEnterButton = () => {};
 }
