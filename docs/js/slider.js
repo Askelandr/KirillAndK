@@ -25,7 +25,7 @@ function SliderFactory(array) {
     this.leftButton = elemId.querySelector("#left-button");
     this.rightButton = elemId.querySelector("#right-button");
     this.imgSlider = elemId.querySelector("#img-slider");
-
+    this.imgSlider.src = url;
     let that = this;
     this.leftButton.addEventListener("click", function (e) {
       that.putLeftButtonSlider(e);
@@ -35,8 +35,6 @@ function SliderFactory(array) {
     });
 
     this.leftButton.disabled = true;
-
-    this.imgSlider.src = url;
   };
   /**
    * The function handles the event of pressing the left button

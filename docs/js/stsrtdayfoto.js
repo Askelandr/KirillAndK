@@ -17,9 +17,10 @@ putButton.addEventListener("click", function (e) {
   console.log(putDataForDayFoto);
   console.log(date);
   putDataForDayFoto.getArray();
+
+  console.log(putDataForDayFoto.arrayData);
   setTimeout(() => {
-    console.log(putDataForDayFoto.arrayData);
     let newDayFoto = new DayNasaFoto();
     newDayFoto.start("fotoDay", putDataForDayFoto.arrayData);
-  }, 1000);
+  }, 6000);
 });

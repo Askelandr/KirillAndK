@@ -45,7 +45,10 @@ class GetDataArray {
     let response = await fetch(this.getUrlApi[i]);
     if (response.ok) {
       let data = await response.json();
-      // console.log(data);
+      setTimeout(() => {
+        console.log(data);
+      }, 2000);
+      console.log(data);
       let imgPromisArray = data;
 
       return imgPromisArray;
