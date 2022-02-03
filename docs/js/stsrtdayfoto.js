@@ -23,5 +23,5 @@ putButton.addEventListener("click", function (e) {
     console.log(putDataForDayFoto.arrayData);
     let newDayFoto = new DayNasaFoto();
     newDayFoto.start("fotoDay", putDataForDayFoto.arrayData);
-  }, 6000);
+  }, 2000);
 });

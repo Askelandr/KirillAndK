@@ -5,33 +5,29 @@
  * @constructor
  * @param {array} array - array of links to the photo@
  */
-function SliderFactory(array) {
-  // this.imgSliderArray = [];
+class SliderFactory {
+  constructor(array) {
+    this.imgSliderArray = array;
+    this.leftButton = null;
+    this.rightButton = null;
+    this.imgSlider = null;
 
-  this.imgSliderArray = array;
-  this.leftButton = null;
-  this.rightButton = null;
-  this.imgSlider = null;
+    this.a = 0;
+  }
 
-  this.a = 0;
   /**
    * The method launches a slider with the necessary data
    * @param {string} id - id DIV element slider
    * @param {string} url - url for the initial image in the slider
    */
-  this.start = function (id, url) {
+  start = function (id, url) {
     let elemId = document.querySelector("#" + id);
-
-    this.leftButton = elemId.querySelector("#left-button");
-    this.rightButton = elemId.querySelector("#right-button");
-    this.imgSlider = elemId.querySelector("#img-slider");
+    this.leftButton = elemId.querySelector(".left-button");
+    this.rightButton = elemId.querySelector(".right-button");
+    this.imgSlider = elemId.querySelector(".img-slider");
     this.imgSlider.src = url;
-    let that = this;
-    this.leftButton.addEventListener("click", function (e) {
-      that.putLeftButtonSlider(e);
-    });
-    this.rightButton.addEventListener("click", function (e) {
-      that.putRightButtonSlider(e);
+    elemId.addEventListener("click", (e) => {
+      this.putButtonSlider(e);
     });
 
     this.leftButton.disabled = true;
@@ -40,27 +36,24 @@ function SliderFactory(array) {
    * The function handles the event of pressing the left button
    * @param {event} event
    */
-  this.putLeftButtonSlider = function (event) {
-    this.a--;
-    this.imgSlider.src = this.imgSliderArray[this.a];
-    this.rightButton.disabled = false;
-    if (this.a === 0) {
-      this.leftButton.disabled = true;
+
+  putButtonSlider = function (event) {
+    if (event.target.value === "left") {
+      this.a--;
       this.imgSlider.src = this.imgSliderArray[this.a];
-    }
-  };
-  /**
-   * The function handles the event of pressing the right button
-   * @param {event} event
-   */
-  this.putRightButtonSlider = function (event) {
-    this.a++;
-    // console.log(this.imgSliderArray);
-    this.imgSlider.src = this.imgSliderArray[this.a];
-    this.leftButton.disabled = false;
-    if (this.a === this.imgSliderArray.length - 1) {
-      this.rightButton.disabled = true;
+      this.rightButton.disabled = false;
+      if (this.a === 0) {
+        this.leftButton.disabled = true;
+        this.imgSlider.src = this.imgSliderArray[this.a];
+      }
+    } else if (event.target.value === "right") {
+      this.a++;
       this.imgSlider.src = this.imgSliderArray[this.a];
+      this.leftButton.disabled = false;
+      if (this.a === this.imgSliderArray.length - 1) {
+        this.rightButton.disabled = true;
+        this.imgSlider.src = this.imgSliderArray[this.a];
+      }
     }
   };
 }
