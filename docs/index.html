@@ -1,73 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Космос близко</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <header>
       <h2 class="header"><a href="./calc.html">КАЛЬКУЛЯТОР</a></h2>
       <h2 class="header"><a href="./fotoDay.html">Фото дня</a></h2>
+      <h2 class="header"><a href="./marsweather.html">Погода на Марсе</a></h2>
+      <h2 class="header"><a href="./epic.html">EPIC</a></h2>
+      <h2 class="header">
+        <a href="./near_earth_objects.html">Ближайшие объекты к земле</a>
+      </h2>
     </header>
     <h1>Фотографии марсоходов с сервера NASA</h1>
     <!--Input section-->
     <div class="input-block" id="input-block">
-      <h2>Curiosity</h2>
-      <select id="curiosity-cam" name="curiosity-cam">
-        <option value="fhaz">fhaz</option>
-        <option value="rhaz">rhaz</option>
-        <option value="mast">mast</option>
-        <option value="chencam">chencam</option>
-        <option value="mahli">mahli</option>
-        <option value="mardi">mardi</option>
-        <option value="navcam">navcam</option>
-      </select>
+      <div class="input-rover">
+        <h2>Curiosity</h2>
+        <div class="inner-input-rover">
+          <select class="select" id="curiosity-cam" name="curiosity-cam">
+            <option value="fhaz">fhaz</option>
+            <option value="rhaz">rhaz</option>
+            <option value="mast">mast</option>
+            <option value="chencam">chencam</option>
+            <option value="mahli">mahli</option>
+            <option value="mardi">mardi</option>
+            <option value="navcam">navcam</option>
+          </select>
 
-      <input
-        type="text"
-        id="inputSol-curiosity"
-        class="inputSol"
-        value="100"
-        placeholder="Введите сол"
-      />
-      <h2>Opportunity</h2>
-      <select id="opportunity-cam" name="opportunity-cam">
-        <option value="fhaz">fhaz</option>
-        <option value="rhaz">rhaz</option>
-        <option value="mast">mast</option>
-        <option value="chencam">chencam</option>
-        <option value="mahli">mahli</option>
-        <option value="mardi">mardi</option>
-        <option value="navcam">navcam</option>
-      </select>
+          <input
+            type="text"
+            id="inputSol-curiosity"
+            class="inputSol"
+            value="100"
+            placeholder="Введите сол"
+          />
+        </div>
+      </div>
 
-      <input
-        type="text"
-        id="inputSol-opportunity"
-        class="inputSol"
-        value=""
-        placeholder="Введите сол"
-      />
-      <h2>Spirit</h2>
-      <select id="spirit-cam" name="spirit-cam">
-        <option value="fhaz">fhaz</option>
-        <option value="rhaz">rhaz</option>
-        <option value="navcam">navcam</option>
-        <option value="pancam">pancam</option>
-        <option value="minites">minites</option>
-      </select>
+      <div class="input-rover">
+        <h2>Opportunity</h2>
+        <div class="inner-input-rover">
+          <select class="select" id="opportunity-cam" name="opportunity-cam">
+            <option value="fhaz">fhaz</option>
+            <option value="rhaz">rhaz</option>
+            <option value="mast">mast</option>
+            <option value="chencam">chencam</option>
+            <option value="mahli">mahli</option>
+            <option value="mardi">mardi</option>
+            <option value="navcam">navcam</option>
+          </select>
 
-      <input
-        type="text"
-        id="inputSol-spirit"
-        class="inputSol"
-        value=""
-        placeholder="Введите сол"
-      />
-      <button id="putBattonGetData" class="buttonInDayFoto">
-        Ввести данные
-      </button>
+          <input
+            type="text"
+            id="inputSol-opportunity"
+            class="inputSol"
+            value=""
+            placeholder="Введите сол"
+          />
+        </div>
+      </div>
+
+      <div class="input-rover">
+        <h2>Spirit</h2>
+        <div class="inner-input-rover">
+          <select class="select" id="spirit-cam" name="spirit-cam">
+            <option value="fhaz">fhaz</option>
+            <option value="rhaz">rhaz</option>
+            <option value="navcam">navcam</option>
+            <option value="pancam">pancam</option>
+            <option value="minites">minites</option>
+          </select>
+
+          <input
+            type="text"
+            id="inputSol-spirit"
+            class="inputSol"
+            value=""
+            placeholder="Введите сол"
+          />
+        </div>
+      </div>
+      <div class="button-rover">
+        <button id="putBattonGetData" class="buttonInDayFoto">
+          Ввести данные
+        </button>
+      </div>
     </div>
 
     <!-- Секция слайдера -->
@@ -76,13 +98,13 @@
       <!-- <h2>Марсоход</h2> -->
       <div class="is-slider" id="slider1">
         <div class="in-slider">
-          <button class="button-slider left-button" value="left"><</button>
+          <button class="left-button" value="left"><</button>
         </div>
         <div class="in-slider">
           <img class="img-slider" src="" alt="family foto" />
         </div>
         <div class="in-slider">
-          <button class="button-slider right-button" value="right">></button>
+          <button class="right-button" value="right">></button>
         </div>
       </div>
     </div>

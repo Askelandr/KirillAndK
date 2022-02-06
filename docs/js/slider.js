@@ -33,7 +33,7 @@ class SliderFactory {
     this.leftButton.disabled = true;
   };
   /**
-   * The function handles the event of pressing the left button
+   * The function handles the event of pressing the left or right button
    * @param {event} event
    */
 
@@ -47,8 +47,8 @@ class SliderFactory {
         this.imgSlider.src = this.imgSliderArray[this.a];
       }
     } else if (event.target.value === "right") {
-      this.a++;
       this.imgSlider.src = this.imgSliderArray[this.a];
+      this.a++;
       this.leftButton.disabled = false;
       if (this.a === this.imgSliderArray.length - 1) {
         this.rightButton.disabled = true;

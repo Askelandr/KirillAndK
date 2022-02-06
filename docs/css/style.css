@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Секция калькулятора */
 .calc-text {
   color: blueviolet;
@@ -58,7 +64,67 @@
   font-size: 30px;
 }
 
+/* Секция введения данных роверров */
+
+.inputSol {
+  color: blueviolet;
+  border-color: rgb(97, 19, 170);
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.inputSol::placeholder {
+  color: #212529;
+  opacity: 0.4;
+}
+.inputSol:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(100, 130, 190, 0.25);
+}
+
+.input-rover {
+  width: 33%;
+  display: inline-block;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(158, 158, 211);
+  border-radius: 10px;
+}
+.inner-input-rover {
+  text-align: center;
+}
+.select {
+  border: none;
+  color: blueviolet;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.select:focus {
+  color: rgb(45, 121, 15);
+}
+.button-rover {
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+}
+.buttonInDayFoto {
+  border-radius: 10px;
+  color: azure;
+  background-color: rgb(117, 75, 156);
+  font-size: 25px;
+  width: 30%;
+}
+
 /* Секция слайдера */
+.input-block {
+  display: inline;
+}
 .left-button {
   margin-top: 180px;
   background: rgb(216, 216, 235);
@@ -97,8 +163,35 @@ h1 {
 }
 h2 {
   text-align: center;
+  color: rgb(57, 4, 107);
 }
 /* Секция Фото Дня */
+
 .in-dayFoto {
   text-align: center;
+}
+.inputInDayFoto {
+  display: block;
+  text-align: center;
+
+  color: blueviolet;
+  border-color: rgb(97, 19, 170);
+  padding: 5px;
+  margin-left: 35%;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.inputInDayFoto:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(100, 130, 190, 0.25);
+}
+/* Секция околоземных объектов */
+.near-objects {
+  width: 47%;
+  display: inline-block;
 }

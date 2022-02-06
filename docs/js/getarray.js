@@ -1,9 +1,10 @@
 "use strict";
+
 /**
  * The class creates an array with photos
  * @constructor
  * @param {Number} urlNum the number of the array element with URL
- * @param {string} date required date YYYY-MM-DD format
+ * @param {obj} date  obj. date:, startDate:, endDate: . Required date YYYY-MM-DD format
  * @param {Number} sol martian sol . Countdown from the moment of landing
  * @param {string} rover rover name Curiosity,opportunity,spirit
  * @param {string} cam camera name
@@ -17,12 +18,7 @@ class GetDataArray {
   constructor(urlNum, date, sol, rover, cam) {
     this.imgSliderArray = [];
     this.key = "PGka1opQDcuPP3qIDr8TN2LkttJevZWu7DZOZJv3";
-    this.getDate = {
-      date: date,
-      startDate: "2021-01-01",
-      endDate: "2021-01-03",
-    };
-
+    this.getDate = date;
     this.getsol = sol;
     this.getRover = rover;
     this.getCam = cam;
@@ -52,6 +48,23 @@ class GetDataArray {
     let i = this.arrayUrlNum;
 
     try {
+      let objPromise = axios
+        .get(this.getUrlApi[i])
+        .then((res) => res.data)
+        .then((objPromise) => {
+          return objPromise;
+        });
+      return objPromise;
+    } catch (error) {
+      alert(error);
+    }
+  };
+  /** 
+   * Создание запроса при помощи fetch()
+  getPromise = async function () {
+    let i = this.arrayUrlNum;
+
+    try {
       let objPromise = fetch(this.getUrlApi[i])
         .then((response) => response.json())
         .then((objPromise) => {
@@ -62,6 +75,7 @@ class GetDataArray {
       alert(error);
     }
   };
+  */
 
   /**
    * The method returns an array of links to the photo
@@ -92,12 +106,18 @@ class GetDataArray {
       });
     } else if (this.arrayUrlNum === 2) {
       that.getPromise().then((fulfilled) => {
+        this.arrayData = fulfilled;
+        console.log(this.arrayData);
+      });
+      return this.imgSliderArray;
+    } else if (this.arrayUrlNum === 3) {
+      that.getPromise().then((fulfilled) => {
         let imgSliderArray = fulfilled;
         let sliderArray = imgSliderArray;
         console.log(sliderArray);
       });
       return this.imgSliderArray;
-    } else if (this.arrayUrlNum === 3) {
+    } else if (this.arrayUrlNum === 4) {
       that.getPromise().then((fulfilled) => {
         let imgSliderArray = fulfilled;
         let sliderArray = imgSliderArray;
