@@ -13,7 +13,6 @@ putButton.addEventListener("click", function (e) {
   console.log(date);
   putDataForDayFoto.getArray();
 
-  console.log(putDataForDayFoto.arrayData);
   setTimeout(() => {
     console.log(putDataForDayFoto.arrayData);
     let newDayFoto = new DayNasaFoto();

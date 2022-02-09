@@ -10,8 +10,19 @@ putButton.addEventListener("click", function (e) {
   console.log(date);
   let putDataForDayFoto = new GetDataArray(4, date, 0, "", "");
   console.log(putDataForDayFoto);
-
   putDataForDayFoto.getArray();
+  setTimeout(() => {
+    console.log(putDataForDayFoto.arrayData);
+    let elementCount = putDataForDayFoto.arrayData.element_count;
+    let nearObjectsData = putDataForDayFoto.arrayData.near_earth_objects;
 
-  console.log(putDataForDayFoto.arrayData);
+    let count = document.querySelector(".count");
+    let dengerCounter = getNearObjects(nearObjectsData);
+    count.innerHTML = `Всего найдено ${elementCount} объектов. Опасных ${dengerCounter}`;
+
+    localStorage.setItem(
+      "near_objects",
+      JSON.stringify(putDataForDayFoto.arrayData)
+    );
+  }, 3000);
 });

@@ -10,4 +10,11 @@ putButton.addEventListener("click", function (e) {
   console.log(putDataForDayFoto);
   console.log(date);
   putDataForDayFoto.getArray();
+  setTimeout(() => {
+    console.log(putDataForDayFoto.arrayData);
+    localStorage.setItem(
+      "mars_weather",
+      JSON.stringify(putDataForDayFoto.arrayData)
+    );
+  }, 2000);
 });

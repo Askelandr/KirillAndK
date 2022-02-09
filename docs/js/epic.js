@@ -12,11 +12,14 @@ putButton.addEventListener("click", function (e) {
   console.log(putDataForDayFoto);
   console.log(date);
   putDataForDayFoto.getArray();
+  setTimeout(() => {
+    console.log(putDataForDayFoto.arrayData);
+    localStorage.setItem("epic", JSON.stringify(putDataForDayFoto.arrayData));
+  }, 2000);
 
-  console.log(putDataForDayFoto.arrayData);
-  //   setTimeout(() => {
-  //     console.log(putDataForDayFoto.arrayData);
-  //     let newDayFoto = new DayNasaFoto();
-  //     newDayFoto.start("fotoDay", putDataForDayFoto.arrayData);
-  //   }, 2000);
+  // setTimeout(() => {
+  //   console.log(putDataForDayFoto.arrayData);
+  //   let newDayFoto = new DayNasaFoto();
+  //   newDayFoto.start("fotoDay", putDataForDayFoto.arrayData);
+  // }, 2000);
 });

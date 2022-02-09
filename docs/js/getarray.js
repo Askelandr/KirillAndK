@@ -4,15 +4,14 @@
  * The class creates an array with photos
  * @constructor
  * @param {Number} urlNum the number of the array element with URL
- * @param {obj} date  obj. date:, startDate:, endDate: . Required date YYYY-MM-DD format
+ * @param {obj} date  obj. date:"", startDate:"", endDate:"" . Required date YYYY-MM-DD format
  * @param {Number} sol martian sol . Countdown from the moment of landing
  * @param {string} rover rover name Curiosity,opportunity,spirit
  * @param {string} cam camera name
  * @this {array} imgSliderArray - array of links to photos
  * @this {string} key - key for API
- * @this {string} getStartDate - date YYYY-MM-DD format
- * @this {string} getEndDate - date YYYY-MM-DD format
  * @this {array}  getUrlApi - URL array
+ * @this {obj}  arrayData - object DATA
  */
 class GetDataArray {
   constructor(urlNum, date, sol, rover, cam) {
@@ -99,35 +98,12 @@ class GetDataArray {
         }
       });
       return this.imgSliderArray;
-    } else if (this.arrayUrlNum === 1) {
-      that.getPromise().then((fulfilled) => {
-        this.arrayData = fulfilled;
-        console.log(this.arrayData);
-      });
-    } else if (this.arrayUrlNum === 2) {
-      that.getPromise().then((fulfilled) => {
-        this.arrayData = fulfilled;
-        console.log(this.arrayData);
-      });
-      return this.imgSliderArray;
-    } else if (this.arrayUrlNum === 3) {
-      that.getPromise().then((fulfilled) => {
-        let imgSliderArray = fulfilled;
-        let sliderArray = imgSliderArray;
-        console.log(sliderArray);
-      });
-      return this.imgSliderArray;
-    } else if (this.arrayUrlNum === 4) {
-      that.getPromise().then((fulfilled) => {
-        let imgSliderArray = fulfilled;
-        let sliderArray = imgSliderArray;
-        console.log(sliderArray);
-      });
-      return this.imgSliderArray;
     } else {
-      console.log("Введена не верная ссылка на API");
+      that.getPromise().then((fulfilled) => {
+        this.arrayData = fulfilled;
+        console.log(this.arrayData);
+        return this.arrayData;
+      });
     }
   };
-  getDataForTakeApi = () => {};
-  putEnterButton = () => {};
 }
