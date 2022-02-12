@@ -205,3 +205,6 @@ h2 {
 td {
   padding: 10px;
 }
+th {
+  background-color: aquamarine;
+}
