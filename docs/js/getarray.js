@@ -87,7 +87,7 @@ class GetDataArray {
     if (this.arrayUrlNum === 0) {
       console.log(that.getPromise());
       that.getPromise().then((fulfilled) => {
-        console.log(fulfilled);
+        // console.log(fulfilled);
         let imgSliderArray = fulfilled;
         let sliderArray = imgSliderArray.photos;
 
@@ -101,7 +101,7 @@ class GetDataArray {
     } else {
       that.getPromise().then((fulfilled) => {
         this.arrayData = fulfilled;
-        console.log(this.arrayData);
+        // console.log(this.arrayData);
         return this.arrayData;
       });
     }
