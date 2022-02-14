@@ -14,7 +14,7 @@ header.innerHTML = `<th data-type="string">Имя</th>
   <th data-type="number">Расстояние промаха(lunar)</th>
   <th data-type="number">Расстояние промаха(Км.)</th>
   <th data-type="number">Скорость(Км./ч.)</th>
-  <th data-type="number">Дата и время сближения</th>`;
+  <th data-type="date">Дата и время сближения</th>`;
 
 document.querySelector("tbody").append(header);
 
@@ -69,6 +69,14 @@ putButton.addEventListener("click", function (e) {
           compare = function (row) {
             if (row.cells[colNum].innerHTML === "Не опасный")
               return (row.hidden = true);
+          };
+          break;
+        case "date":
+          compare = function (rowA, rowB) {
+            return (
+              new Date(rowA.cells[colNum].innerHTML) -
+              new Date(rowB.cells[colNum].innerHTML)
+            );
           };
           break;
 

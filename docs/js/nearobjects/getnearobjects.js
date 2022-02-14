@@ -26,12 +26,24 @@ function getNearObjects(obj) {
       <td >${obj[key][i]["name"]}</td>
       <td >${seySos}</td>
       <td >${seyWho}</td>
-      <td>${obj[key][i]["estimated_diameter"]["meters"]["estimated_diameter_max"]}</td>
-      <td >${obj[key][i]["absolute_magnitude_h"]}</td>
-      <td >${obj[key][i]["close_approach_data"][0]["miss_distance"]["lunar"]}</td>
-      <td >${obj[key][i]["close_approach_data"][0]["miss_distance"]["kilometers"]}</td>
-      <td >${obj[key][i]["close_approach_data"][0]["relative_velocity"]["kilometers_per_hour"]}</td>
-      <td >${obj[key][i]["close_approach_data"][0]["close_approach_date_full"]}</td>`;
+      <td>${obj[key][i]["estimated_diameter"]["meters"][
+        "estimated_diameter_max"
+      ].toFixed(2)}</td>
+      <td >${obj[key][i]["absolute_magnitude_h"].toFixed(2)}</td>
+      <td >${
+        obj[key][i]["close_approach_data"][0]["miss_distance"]["lunar"]
+      }</td>
+      <td >${
+        obj[key][i]["close_approach_data"][0]["miss_distance"]["kilometers"]
+      }</td>
+      <td >${
+        obj[key][i]["close_approach_data"][0]["relative_velocity"][
+          "kilometers_per_hour"
+        ]
+      }</td>
+      <td >${
+        obj[key][i]["close_approach_data"][0]["close_approach_date_full"]
+      }</td>`;
       document.querySelector("tbody").append(row);
     }
   }
