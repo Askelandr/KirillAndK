@@ -7,14 +7,14 @@ let putButton = elemId.querySelector("#putBattonDate");
 let header = document.createElement("tr");
 
 header.innerHTML = `<th data-type="string">Имя</th>
-  <th data-type="getsos">Опасность</th>
+  <th data-type="getsos" data-tooltip="Показать только<br>опасные объекты">Опасность</th>
   <th data-type="string">Тип объекта</th>
-  <th data-type="number">Max диаметр(метры)</th>
-  <th data-type="number">Магнитуда</th>
-  <th data-type="number">Расстояние промаха(lunar)</th>
-  <th data-type="number">Расстояние промаха(Км.)</th>
-  <th data-type="number">Скорость(Км./ч.)</th>
-  <th data-type="date">Дата и время сближения</th>`;
+  <th data-type="number" data-tooltip="От минимального<br>к максимальному">Max диаметр(метры)</th>
+  <th data-type="number" data-tooltip="От минимальной<br>к максимальной">Магнитуда</th>
+  <th data-type="number" data-tooltip="От минимального<br>к максимальному">Расстояние промаха(lunar)</th>
+  <th data-type="number" data-tooltip="От минимального<br>к максимальному">Расстояние промаха(Км.)</th>
+  <th data-type="number" data-tooltip="От минимальной<br>к максимальной">Скорость(Км./ч.)</th>
+  <th data-type="date" data-tooltip="От ближней<br>к дальней">Дата и время сближения</th>`;
 
 document.querySelector("tbody").append(header);
 
@@ -67,8 +67,8 @@ putButton.addEventListener("click", function (e) {
           break;
         case "getsos":
           compare = function (row) {
-            if (row.cells[colNum].innerHTML === "Не опасный")
-              return (row.hidden = true);
+            if (row.cells[colNum].innerHTML === "~")
+              return (row.hidden = !row.hidden);
           };
           break;
         case "date":

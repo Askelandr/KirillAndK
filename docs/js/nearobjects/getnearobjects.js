@@ -11,9 +11,9 @@ function getNearObjects(obj) {
       let row = document.createElement("tr");
       row.classList.add("table-data");
       if (obj[key][i]["is_potentially_hazardous_asteroid"] === false) {
-        seySos = "Не опасный";
+        seySos = "~";
       } else {
-        seySos = "Опасный";
+        seySos = "&#9989";
         dengerCounter++;
       }
       if (obj[key][i]["is_sentry_object"] === false) {
