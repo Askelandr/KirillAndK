@@ -191,6 +191,13 @@ h2 {
   box-shadow: 0 0 0 0.2rem rgba(100, 130, 190, 0.25);
 }
 /* Секция околоземных объектов */
+table {
+  border-radius: 10px;
+  text-align: center;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+}
 .near-objects {
   width: 47%;
   display: inline-block;
@@ -207,5 +214,7 @@ td {
   text-align: center;
 }
 th {
+  font-size: 20px;
+  padding: 5px;
   background-color: aquamarine;
 }
