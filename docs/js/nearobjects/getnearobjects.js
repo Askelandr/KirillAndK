@@ -30,17 +30,17 @@ function getNearObjects(obj) {
         "estimated_diameter_max"
       ].toFixed(2)}</td>
       <td >${obj[key][i]["absolute_magnitude_h"].toFixed(2)}</td>
-      <td >${
+      <td >${Number(
         obj[key][i]["close_approach_data"][0]["miss_distance"]["lunar"]
-      }</td>
-      <td >${
+      ).toFixed(2)}</td>
+      <td >${Number(
         obj[key][i]["close_approach_data"][0]["miss_distance"]["kilometers"]
-      }</td>
-      <td >${
+      ).toFixed(2)}</td>
+      <td >${Number(
         obj[key][i]["close_approach_data"][0]["relative_velocity"][
           "kilometers_per_hour"
         ]
-      }</td>
+      ).toFixed(2)}</td>
       <td >${
         obj[key][i]["close_approach_data"][0]["close_approach_date_full"]
       }</td>`;
