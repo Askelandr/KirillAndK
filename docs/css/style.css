@@ -220,7 +220,6 @@ th {
   background-color: aquamarine;
 }
 .tooltip {
-  z-index: 100;
   position: fixed;
   font-size: 20px;
   padding: 15px;
@@ -230,4 +229,13 @@ th {
   color: #333;
   background: #fff;
   box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+}
+.fieldset {
+  /* background-color: rgb(195, 159, 230); */
+  box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+  border: 2px rgb(126, 60, 192);
+  color: rgb(57, 4, 107);
+  font-size: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }

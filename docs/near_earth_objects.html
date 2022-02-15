@@ -14,30 +14,35 @@
       <h2 class="header"><a href="./fotoDay.html">Фото дня</a></h2>
       <h2 class="header"><a href="./epic.html">EPIC</a></h2>
     </header>
-    <h1>Космические объекты, ближайшие к земле</h1>
+    <h1>Астероиды сближающиеся с землей</h1>
 
     <!-- Секция фото дня -->
     <!--  Выводит фото дня NASA на страницу -->
     <div>
-      <h2>Выбирете начальную и конечную даты поиска</h2>
       <div class="is-dayFoto" id="fotoDay">
         <div class="in-dayFoto">
           <div class="input-block" id="input-block">
             <div class="near-objects">
-              <input
-                type="date"
-                id="inputStartDate"
-                class="inputInDayFoto"
-                value="2022-04-07"
-              />
+              <fieldset name="StartDate" class="fieldset">
+                <legend>Начальная дата поиска</legend>
+                <input
+                  type="date"
+                  id="inputStartDate"
+                  class="inputInDayFoto"
+                  value="2022-04-07"
+                />
+              </fieldset>
             </div>
             <div class="near-objects">
-              <input
-                type="date"
-                id="inputEndDate"
-                class="inputInDayFoto"
-                value="2022-04-10"
-              />
+              <fieldset name="EndDate" class="fieldset">
+                <legend>Конечная дата поиска</legend>
+                <input
+                  type="date"
+                  id="inputEndDate"
+                  class="inputInDayFoto"
+                  value="2022-04-10"
+                />
+              </fieldset>
             </div>
             <button id="putBattonDate" class="buttonInDayFoto">
               Ввести даты
