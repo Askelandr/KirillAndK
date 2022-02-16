@@ -22,67 +22,100 @@
       <div class="input-rover">
         <h2>Curiosity</h2>
         <div class="inner-input-rover">
-          <select class="select" id="curiosity-cam" name="curiosity-cam">
-            <option value="fhaz">fhaz</option>
-            <option value="rhaz">rhaz</option>
-            <option value="mast">mast</option>
-            <option value="chencam">chencam</option>
-            <option value="mahli">mahli</option>
-            <option value="mardi">mardi</option>
-            <option value="navcam">navcam</option>
-          </select>
+          <form id="curiosity">
+            <select
+              class="select"
+              id="curiosity-cam"
+              name="curiosity-cam"
+              data-tooltip="Необходимо выбрать камеру
+            <br>изображения с которой
+            <br> будут загружены"
+            >
+              <option value="fhaz">fhaz</option>
+              <option value="rhaz">rhaz</option>
+              <option value="mast">mast</option>
+              <option value="chencam">chencam</option>
+              <option value="mahli">mahli</option>
+              <option value="mardi">mardi</option>
+              <option value="navcam">navcam</option>
+            </select>
 
-          <input
-            type="text"
-            id="inputSol-curiosity"
-            class="inputSol"
-            value="100"
-            placeholder="Введите сол"
-          />
+            <input
+            name="curiosity"
+              type="text"
+              id="inputSol-curiosity"
+              class="inputSol"
+              value="100"
+              placeholder="Введите сол"
+            />
+            <div class="error-input" style="opacity: 0;">Возможен ввод только целого числа</div>
+          </form>
         </div>
       </div>
 
       <div class="input-rover">
         <h2>Opportunity</h2>
         <div class="inner-input-rover">
-          <select class="select" id="opportunity-cam" name="opportunity-cam">
-            <option value="fhaz">fhaz</option>
-            <option value="rhaz">rhaz</option>
-            <option value="mast">mast</option>
-            <option value="chencam">chencam</option>
-            <option value="mahli">mahli</option>
-            <option value="mardi">mardi</option>
-            <option value="navcam">navcam</option>
-          </select>
+          <form id="opportunity">
+            <select
+              class="select"
+              id="opportunity-cam"
+              name="opportunity-cam"
+              data-tooltip="Необходимо выбрать камеру
+            <br>изображения с которой
+            <br> будут загружены"
+            >
+              <option value="fhaz">fhaz</option>
+              <option value="rhaz">rhaz</option>
+              <option value="mast">mast</option>
+              <option value="chencam">chencam</option>
+              <option value="mahli">mahli</option>
+              <option value="mardi">mardi</option>
+              <option value="navcam">navcam</option>
+            </select>
 
-          <input
-            type="text"
-            id="inputSol-opportunity"
-            class="inputSol"
-            value=""
-            placeholder="Введите сол"
-          />
+            <input
+            name="opportunity"
+              type="text"
+              id="inputSol-opportunity"
+              class="inputSol"
+              value=""
+              placeholder="Введите сол"
+            />
+            <div class="error-input" style="opacity: 0;">Возможен ввод только целого числа</div>
+          </form>
         </div>
       </div>
 
       <div class="input-rover">
         <h2>Spirit</h2>
         <div class="inner-input-rover">
-          <select class="select" id="spirit-cam" name="spirit-cam">
-            <option value="fhaz">fhaz</option>
-            <option value="rhaz">rhaz</option>
-            <option value="navcam">navcam</option>
-            <option value="pancam">pancam</option>
-            <option value="minites">minites</option>
-          </select>
+          <form id="spirit">
+            <select
+              class="select"
+              id="spirit-cam"
+              name="spirit-cam"
+              data-tooltip="Необходимо выбрать камеру
+            <br>изображения с которой
+            <br> будут загружены"
+            >
+              <option value="fhaz">fhaz</option>
+              <option value="rhaz">rhaz</option>
+              <option value="navcam">navcam</option>
+              <option value="pancam">pancam</option>
+              <option value="minites">minites</option>
+            </select>
 
-          <input
-            type="text"
-            id="inputSol-spirit"
-            class="inputSol"
-            value=""
-            placeholder="Введите сол"
-          />
+            <input
+            name="spirit"
+              type="text"
+              id="inputSol-spirit"
+              class="inputSol"
+              value=""
+              placeholder="Введите сол"
+            />
+            <div class="error-input" style="opacity: 0;">Возможен ввод только целого числа</div>
+          </form>
         </div>
       </div>
       <div class="button-rover">
@@ -98,22 +131,24 @@
       <!-- <h2>Марсоход</h2> -->
       <div class="is-slider" id="slider1">
         <div class="in-slider">
-          <button class="left-button" value="left"><</button>
+          <button class="left-button" value="left">&#171</button>
         </div>
         <div class="in-slider">
           <img class="img-slider" src="" alt="family foto" />
         </div>
         <div class="in-slider">
-          <button class="right-button" value="right">></button>
+          <button class="right-button" value="right">&#187</button>
         </div>
       </div>
     </div>
 
     <!--Подключение скриптов-->
-    <script src="js/putsliderhtml.js"></script>
+    <script src="js/rovers/validinput.js"></script>
+    <script src="js/nearobjects/tooltip.js"></script>
+    <script src="js/slider/putsliderhtml.js"></script>
     <script src="js/getarray.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/slider/slider.js"></script>
 
-    <script src="js/startslider.js"></script>
+    <script src="js/rovers/startslider.js"></script>
   </body>
 </html>

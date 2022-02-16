@@ -21,18 +21,21 @@
     <!-- Секция фото дня -->
     <!--  Выводит фото дня NASA на страницу -->
     <div>
-      <h2>Фото дня</h2>
       <div class="is-dayFoto" id="fotoDay">
         <div class="in-dayFoto">
           <div class="input-block" id="input-block">
-            <input
-              type="date"
-              id="inputDate"
-              class="inputInDayFoto"
-              value="2021-04-07"
-            />
+            <fieldset name="EndDate" class="fieldset">
+              <legend>Введите дату</legend>
+              <input
+                type="date"
+                id="inputDate"
+                class="inputInDayFoto"
+                value="2021-04-07"
+              />
+            </fieldset>
+
             <button id="putBattonGetData" class="buttonInDayFoto">
-              Ввести день
+              Отправить данные
             </button>
           </div>
           <h2 class="headerInDayFoto" id="headerInDayFoto"></h2>

@@ -11,12 +11,12 @@ let header = document.createElement("tr");
 header.innerHTML = `<th data-type="string">Имя</th>
   <th data-type="getsos" data-tooltip="Показать все<br>или только<br>опасные объекты">Опасность</th>
   <th data-type="string">Тип объекта</th>
-  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Max диаметр(метры)</th>
+  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Max диаметр<br>(метры)</th>
   <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Магнитуда</th>
-  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Расстояние промаха(lunar)</th>
-  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Расстояние промаха(Км.)</th>
-  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Скорость(Км./ч.)</th>
-  <th data-type="date" data-tooltip="&#8920 Min-Max &#8921">Дата и время сближения</th>`;
+  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Расстояние промаха<br>(lunar)</th>
+  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Расстояние промаха<br>(Км.)</th>
+  <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Скорость<br>(Км./ч.)</th>
+  <th data-type="date" data-tooltip="&#8920 Min-Max &#8921">Дата <br>и <br>время сближения</th>`;
 
 document.querySelector("tbody").append(header);
 
