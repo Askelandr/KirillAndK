@@ -184,6 +184,21 @@ h2 {
 }
 /* Секция Фото Дня */
 
+/* .crop-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.crop-container img {
+  margin-top: 0;
+  margin-left: 0;
+} */
+.crop-container {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
 .in-dayFoto {
   text-align: center;
 }
