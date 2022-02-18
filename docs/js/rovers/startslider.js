@@ -1,4 +1,5 @@
 `use strict`;
+let visualSlider = document.querySelectorAll(".is-slider");
 let elemId = document.querySelector("#input-block");
 
 let curiosityCam = elemId.querySelector("#curiosity-cam");
@@ -63,4 +64,8 @@ putButton.addEventListener("click", function (e) {
   slider2.start("slider2", opportunity);
 
   slider3.start("slider3", spirit);
+
+  for (property of visualSlider) {
+    property.style.opacity = 1;
+  }
 });
