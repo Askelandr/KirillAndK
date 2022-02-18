@@ -123,7 +123,7 @@
 }
 .button-rover {
   text-align: center;
-  padding: 30px;
+  margin: 20px 0 20px 0;
   width: 100%;
 }
 .buttonInDayFoto {
@@ -141,17 +141,21 @@
 }
 .left-button {
   margin-top: 180px;
+  width: 130px;
+  height: 130px;
   background: white;
   border-radius: 50%;
-  border-color: white;
+  border-color: rgb(178, 178, 238);
   font-size: 100px;
   color: rgb(83, 83, 138);
 }
 .right-button {
+  width: 130px;
+  height: 130px;
   margin-top: 180px;
   background: white;
   border-radius: 50%;
-  border-color: white;
+  border-color: rgb(178, 178, 238);
   font-size: 100px;
   color: rgb(83, 83, 138);
 }

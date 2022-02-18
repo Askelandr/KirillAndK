@@ -46,7 +46,7 @@ putButton.addEventListener("click", function (e) {
     let dengerCounter = getNearObjects(nearObjectsData);
     if (elementCount === undefined) {
       counterAttempt++;
-      console.log(counterAttempt);
+
       if (counterAttempt > 2) {
         rollingStone.style.opacity = 0;
         count.innerHTML = "Попробуйте поменять даты или уменьшить период.";
