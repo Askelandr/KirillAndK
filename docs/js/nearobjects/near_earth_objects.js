@@ -5,6 +5,7 @@ let date = {};
 let startDate = elemId.querySelector("#inputStartDate");
 let endDate = elemId.querySelector("#inputEndDate");
 let putButton = elemId.querySelector("#putBattonDate");
+let rollingStone = document.querySelector(".rolling-stone");
 
 let header = document.createElement("tr");
 
@@ -23,6 +24,7 @@ document.querySelector("tbody").append(header);
 let counterAttempt = 0;
 // Получение данных из API
 putButton.addEventListener("click", function (e) {
+  rollingStone.style.opacity = 1;
   date.startDate = startDate.value;
   date.endDate = endDate.value;
 
@@ -46,12 +48,15 @@ putButton.addEventListener("click", function (e) {
       counterAttempt++;
       console.log(counterAttempt);
       if (counterAttempt > 2) {
+        rollingStone.style.opacity = 0;
         count.innerHTML = "Попробуйте поменять даты или уменьшить период.";
         counterAttempt = 0;
       } else {
+        rollingStone.style.opacity = 0;
         count.innerHTML = "Похоже в космосе проблемы. Попробуйте еще раз.";
       }
     } else {
+      rollingStone.style.opacity = 0;
       counterAttempt = 0;
       count.innerHTML = `Всего найдено ${elementCount} объектов. Опасных ${dengerCounter}`;
     }

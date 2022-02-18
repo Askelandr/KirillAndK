@@ -222,6 +222,27 @@ h2 {
   box-shadow: 0 0 0 0.2rem rgba(100, 130, 190, 0.25);
 }
 /* Секция околоземных объектов */
+
+@keyframes move1 {
+  from {
+    left: 800px;
+  }
+  to {
+    left: 670px;
+  }
+}
+.rolling-stone {
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(143, 40, 184);
+  border-radius: 50%;
+  display: inline-block;
+  animation: move1 0.7s infinite alternate;
+  position: absolute;
+  opacity: 0;
+}
+
 @keyframes move {
   from {
     left: 1200px;
