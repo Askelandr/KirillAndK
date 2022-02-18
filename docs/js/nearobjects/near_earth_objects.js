@@ -19,11 +19,15 @@ header.innerHTML = `<th data-type="string">Имя</th>
   <th data-type="date" data-tooltip="&#8920 Min-Max &#8921">Дата <br>и <br>время сближения</th>`;
 
 document.querySelector("tbody").append(header);
-
+// Счетчик попыток запросов
+let counterAttempt = 0;
 // Получение данных из API
 putButton.addEventListener("click", function (e) {
   date.startDate = startDate.value;
   date.endDate = endDate.value;
+
+  let count = document.querySelector(".count");
+  count.innerHTML = "";
 
   // Удаляем предыдущие данные
   let td = document.querySelectorAll(".table-data");
@@ -37,10 +41,20 @@ putButton.addEventListener("click", function (e) {
     let elementCount = putDataForDayFoto.arrayData.element_count;
     let nearObjectsData = putDataForDayFoto.arrayData.near_earth_objects;
 
-    let count = document.querySelector(".count");
-
     let dengerCounter = getNearObjects(nearObjectsData);
-    count.innerHTML = `Всего найдено ${elementCount} объектов. Опасных ${dengerCounter}`;
+    if (elementCount === undefined) {
+      counterAttempt++;
+      console.log(counterAttempt);
+      if (counterAttempt > 2) {
+        count.innerHTML = "Попробуйте поменять даты или уменьшить период.";
+        counterAttempt = 0;
+      } else {
+        count.innerHTML = "Похоже в космосе проблемы. Попробуйте еще раз.";
+      }
+    } else {
+      counterAttempt = 0;
+      count.innerHTML = `Всего найдено ${elementCount} объектов. Опасных ${dengerCounter}`;
+    }
     let table = document.querySelector(".table");
     let counter = 0;
     table.onclick = function (event) {
