@@ -27,7 +27,7 @@ putButton.addEventListener("click", function (e) {
   date.endDate = endDate.value;
 
   let count = document.querySelector(".count");
-  count.innerHTML = "";
+  count.innerHTML = "Идет загрузка...";
 
   // Удаляем предыдущие данные
   let td = document.querySelectorAll(".table-data");
