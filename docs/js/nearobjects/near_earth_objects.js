@@ -8,7 +8,7 @@ let putButton = elemId.querySelector("#putBattonDate");
 let rollingStone = document.querySelector(".rolling-stone");
 
 let header = document.createElement("tr");
-
+header.classList.add("table-header");
 header.innerHTML = `<th data-type="string">Имя</th>
   <th data-type="getsos" data-tooltip="Показать все<br>или только<br>опасные объекты">Опасность</th>
   <th data-type="string">Тип объекта</th>
