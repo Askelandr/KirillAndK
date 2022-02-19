@@ -11,7 +11,6 @@ class SliderFactory {
     this.leftButton = null;
     this.rightButton = null;
     this.imgSlider = null;
-
     this.a = 0;
   }
 
@@ -31,6 +30,7 @@ class SliderFactory {
     });
 
     this.leftButton.disabled = true;
+    this.leftButton.style.opacity = 0;
   };
   /**
    * The function handles the event of pressing the left or right button
@@ -42,16 +42,21 @@ class SliderFactory {
       this.a--;
       this.imgSlider.src = this.imgSliderArray[this.a];
       this.rightButton.disabled = false;
+      this.rightButton.style.opacity = 1;
+
       if (this.a === 0) {
         this.leftButton.disabled = true;
+        this.leftButton.style.opacity = 0;
         this.imgSlider.src = this.imgSliderArray[this.a];
       }
     } else if (event.target.value === "right") {
       this.imgSlider.src = this.imgSliderArray[this.a];
       this.a++;
       this.leftButton.disabled = false;
+      this.leftButton.style.opacity = 1;
       if (this.a === this.imgSliderArray.length - 1) {
         this.rightButton.disabled = true;
+        this.rightButton.style.opacity = 0;
         this.imgSlider.src = this.imgSliderArray[this.a];
       }
     }
