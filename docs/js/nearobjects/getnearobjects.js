@@ -18,9 +18,9 @@ function getNearObjects(obj) {
         dengerCounter++;
       }
       if (obj[key][i]["is_sentry_object"] === false) {
-        seyWho = "Не сторожевой";
+        seyWho = "~";
       } else {
-        seyWho = "Сторожевой";
+        seyWho = "&#9989";
       }
 
       row.innerHTML = `

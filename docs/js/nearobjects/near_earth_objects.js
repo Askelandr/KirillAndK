@@ -11,7 +11,7 @@ let header = document.createElement("tr");
 header.classList.add("table-header");
 header.innerHTML = `<th data-type="string">Имя</th>
   <th data-type="getsos" data-tooltip="Показать все<br>или только<br>опасные объекты">Опасность</th>
-  <th data-type="string">Тип объекта</th>
+  <th data-type="string">Sentry</th>
   <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Max диаметр<br>(метры)</th>
   <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Магнитуда</th>
   <th data-type="number" data-tooltip="&#8920 Min-Max &#8921">Расстояние промаха<br>(lunar)</th>
