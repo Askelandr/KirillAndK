@@ -11,6 +11,10 @@ function getNearObjects(obj) {
     for (let i = 0; i < obj[key].length; i++) {
       let row = document.createElement("tr");
       row.classList.add("table-data");
+
+      let approachDate =
+        obj[key][i]["close_approach_data"][0]["close_approach_date_full"];
+      approachDate = approachDate.replace("2022-", "");
       if (obj[key][i]["is_potentially_hazardous_asteroid"] === false) {
         seySos = "~";
       } else {
@@ -42,9 +46,7 @@ function getNearObjects(obj) {
           "kilometers_per_hour"
         ]
       ).toFixed(2)}</td>
-      <td >${
-        obj[key][i]["close_approach_data"][0]["close_approach_date_full"]
-      }</td>`;
+      <td >${approachDate}</td>`;
       document.querySelector("tbody").append(row);
     }
   }
