@@ -42,7 +42,7 @@ putButton.addEventListener("click", function (e) {
   setTimeout(() => {
     let elementCount = putDataForDayFoto.arrayData.element_count;
     let nearObjectsData = putDataForDayFoto.arrayData.near_earth_objects;
-
+    console.log(nearObjectsData);
     let dengerCounter = getNearObjects(nearObjectsData);
     if (elementCount === undefined) {
       counterAttempt++;
