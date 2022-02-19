@@ -27,7 +27,7 @@ putButton.addEventListener("click", function (e) {
   rollingStone.style.opacity = 1;
   date.startDate = startDate.value;
   date.endDate = endDate.value;
-
+  console.log(date.startDate, date.endDate);
   let count = document.querySelector(".count");
   count.innerHTML = "Идет загрузка...";
 
