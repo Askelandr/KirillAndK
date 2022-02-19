@@ -30,7 +30,7 @@ class SliderFactory {
     });
 
     this.leftButton.disabled = true;
-    this.leftButton.style.opacity = 0;
+    this.leftButton.style.opacity = 0.3;
   };
   /**
    * The function handles the event of pressing the left or right button
@@ -46,7 +46,7 @@ class SliderFactory {
 
       if (this.a === 0) {
         this.leftButton.disabled = true;
-        this.leftButton.style.opacity = 0;
+        this.leftButton.style.opacity = 0.3;
         this.imgSlider.src = this.imgSliderArray[this.a];
       }
     } else if (event.target.value === "right") {
@@ -56,7 +56,7 @@ class SliderFactory {
       this.leftButton.style.opacity = 1;
       if (this.a === this.imgSliderArray.length - 1) {
         this.rightButton.disabled = true;
-        this.rightButton.style.opacity = 0;
+        this.rightButton.style.opacity = 0.3;
         this.imgSlider.src = this.imgSliderArray[this.a];
       }
     }
