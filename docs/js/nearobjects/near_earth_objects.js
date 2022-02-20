@@ -98,15 +98,15 @@ putButton.addEventListener("click", function (e) {
           if (counter % 1 == 0 && counter % 2 != 0) {
             compare = function (rowA, rowB) {
               return (
-                new Date(rowA.cells[colNum].innerHTML) -
-                new Date(rowB.cells[colNum].innerHTML)
+                rowA.cells[colNum].innerHTML[0] -
+                rowB.cells[colNum].innerHTML[0]
               );
             };
           } else {
             compare = function (rowA, rowB) {
               return (
-                new Date(rowB.cells[colNum].innerHTML) -
-                new Date(rowA.cells[colNum].innerHTML)
+                rowB.cells[colNum].innerHTML[0] -
+                rowA.cells[colNum].innerHTML[0]
               );
             };
           }
