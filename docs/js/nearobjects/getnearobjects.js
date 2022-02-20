@@ -20,7 +20,7 @@ function getNearObjects(obj) {
       let month = longDate.getMonth();
       let date = longDate.getDate();
       let time = approachDate.slice(12);
-      console.log(time);
+      console.log(longDate);
 
       if (month === 0) {
         newapproachDate = date + " " + "Января" + " " + time;
