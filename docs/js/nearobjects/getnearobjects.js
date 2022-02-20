@@ -1,5 +1,7 @@
 "use strict";
 function getNearObjects(obj) {
+  let returnedArray = [];
+  let newMonth = "";
   let seySos = "";
   let dengerCounter = 0;
   let seyWho = "";
@@ -18,34 +20,47 @@ function getNearObjects(obj) {
       );
 
       let month = longDate.getMonth();
+
       let date = longDate.getDate();
       let time = approachDate.slice(12);
       console.log(longDate);
 
       if (month === 0) {
-        newapproachDate = date + " " + "Января" + " " + time;
+        newMonth = "Января";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 1) {
-        newapproachDate = date + " " + "Февраля" + " " + time;
+        newMonth = "Февраля";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 2) {
-        newapproachDate = date + " " + "Марта" + " " + time;
+        newMonth = "Марта";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 3) {
-        newapproachDate = date + " " + "Апреля" + " " + time;
+        newMonth = "Апреля";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 4) {
-        newapproachDate = date + " " + "Мая" + " " + time;
+        newMonth = "Мая";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 5) {
-        newapproachDate = date + " " + "Июня" + " " + time;
+        newMonth = "Июня";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 6) {
-        newapproachDate = date + " " + "Июля" + " " + time;
+        newMonth = "Июля";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 7) {
-        newapproachDate = date + " " + "Августа" + " " + time;
+        newMonth = "Августа";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 8) {
-        newapproachDate = date + " " + "Сентября" + " " + time;
+        newMonth = "Сентября";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 9) {
-        newapproachDate = date + " " + "Октября" + " " + time;
+        newMonth = "Октября";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else if (month === 10) {
-        newapproachDate = date + " " + "Ноября" + " " + time;
+        newMonth = "Ноября";
+        newapproachDate = date + " " + newMonth + " " + time;
       } else {
-        newapproachDate = date + " " + "Декабря" + " " + time;
+        newMonth = "Декабря";
+        newapproachDate = date + " " + newMonth + " " + time;
       }
 
       if (obj[key][i]["is_potentially_hazardous_asteroid"] === false) {
@@ -83,5 +98,7 @@ function getNearObjects(obj) {
       document.querySelector("tbody").append(row);
     }
   }
-  return dengerCounter;
+  returnedArray[0] = dengerCounter;
+  returnedArray[1] = newMonth;
+  return returnedArray;
 }

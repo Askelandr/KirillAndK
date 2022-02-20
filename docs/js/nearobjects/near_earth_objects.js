@@ -43,7 +43,10 @@ putButton.addEventListener("click", function (e) {
     let elementCount = putDataForDayFoto.arrayData.element_count;
     let nearObjectsData = putDataForDayFoto.arrayData.near_earth_objects;
     console.log(nearObjectsData);
-    let dengerCounter = getNearObjects(nearObjectsData);
+    let dataArray = getNearObjects(nearObjectsData);
+    let dengerCounter = dataArray[0];
+    let newMonth = dataArray[1];
+
     if (elementCount === undefined) {
       counterAttempt++;
 
@@ -98,15 +101,15 @@ putButton.addEventListener("click", function (e) {
           if (counter % 1 == 0 && counter % 2 != 0) {
             compare = function (rowA, rowB) {
               return (
-                rowA.cells[colNum].innerHTML.substring(0, 2) -
-                rowB.cells[colNum].innerHTML.substring(0, 2)
+                new Date(rowA.cells[colNum].innerHTML.replace(newMonth, "")) -
+                new Date(rowB.cells[colNum].innerHTML.replace(newMonth, ""))
               );
             };
           } else {
             compare = function (rowA, rowB) {
               return (
-                rowB.cells[colNum].innerHTML.substring(0, 2) -
-                rowA.cells[colNum].innerHTML.substring(0, 2)
+                new Date(rowB.cells[colNum].innerHTML.replace(newMonth, "")) -
+                new Date(rowA.cells[colNum].innerHTML.replace(newMonth, ""))
               );
             };
           }
