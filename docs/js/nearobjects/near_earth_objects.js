@@ -129,5 +129,5 @@ putButton.addEventListener("click", function (e) {
       rowsArray.sort(compare);
       tbody.append(...rowsArray);
     }
-  }, 3000);
+  }, 4000);
 });

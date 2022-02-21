@@ -35,7 +35,7 @@ function getNearObjects(obj) {
         longDate = new Date(
           obj[key][i]["close_approach_data"][0][
             "close_approach_date_full"
-          ].replace("", "T")
+          ].replace(" ", "T")
         );
       } else {
         longDate = new Date(
