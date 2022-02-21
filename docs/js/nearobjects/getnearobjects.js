@@ -19,8 +19,9 @@ function getNearObjects(obj) {
   let dengerCounter = 0;
   let seyWho = "";
   let newapproachDate = "";
-  let longDate = new Date();
+  let longDate;
   for (let key in obj) {
+    //Вывод заголовка с числом
     // let row = document.createElement("tr");
     // row.innerHTML = `<th colspan="9">${key}</th>`;
     // document.querySelector("tbody").append(row);
@@ -29,7 +30,7 @@ function getNearObjects(obj) {
       row.classList.add("table-data");
       let approachDate =
         obj[key][i]["close_approach_data"][0]["close_approach_date_full"];
-      console.log(ValidIosSistem.isAppleDevice);
+
       if (isAppleDevice()) {
         longDate = new Date(
           obj[key][i]["close_approach_data"][0][
@@ -93,11 +94,4 @@ function getNearObjects(obj) {
   returnedArray[0] = dengerCounter;
 
   return returnedArray;
-}
-
-function isAppleDevice() {
-  if (navigator.userAgent.match(/(iPhone|iPod|iPad|safari)/) != null) {
-    return true;
-  }
-  return false;
 }
