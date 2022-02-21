@@ -32,11 +32,11 @@ function getNearObjects(obj) {
         obj[key][i]["close_approach_data"][0]["close_approach_date_full"];
 
       if (isAppleDevice()) {
-        longDate = myDate(approachDate);
+        longDate = new Date(approachDate);
+        console.log("ios");
       } else {
-        longDate = new Date(
-          obj[key][i]["close_approach_data"][0]["close_approach_date_full"]
-        );
+        longDate = new Date(approachDate);
+        console.log("windows");
       }
 
       //Получаем отдельно месяц день и год
