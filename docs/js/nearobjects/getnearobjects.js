@@ -32,8 +32,12 @@ function getNearObjects(obj) {
         obj[key][i]["close_approach_data"][0]["close_approach_date_full"];
 
       if (isAppleDevice()) {
+        approachDate = approachDate.replace("Apr", "04");
+        approachDate = approachDate.replace("-", "/");
+        approachDate = approachDate.replace("-", "/");
+        approachDate = approachDate.replace(" ", "T");
         longDate = new Date(approachDate);
-        console.log("ios");
+        console.log("ios", approachDate);
       } else {
         longDate = new Date(approachDate);
         console.log("windows");
