@@ -255,7 +255,7 @@ h2 {
 
 @keyframes move {
   from {
-    left: 1200px;
+    left: 75vw;
     transform: scale(1);
   }
   to {
@@ -317,3 +317,16 @@ th {
   border-radius: 10px;
   margin-bottom: 20px;
 }
+/* Медиа запросы */
+/* @media (min-width: 250px) and(max-width:390px) {
+  @keyframes move {
+    from {
+      left: 80vw;
+      transform: scale(1);
+    }
+    to {
+      left: 0;
+      transform: scale(0.2);
+    }
+  }
+} */

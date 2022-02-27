@@ -34,7 +34,8 @@ class GetDataArray {
       `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.getRover}/photos?sol=${this.getsol}&camera=${this.getCam}&api_key=${this.key}`,
       `https://api.nasa.gov/planetary/apod?api_key=${this.key}&date=${this.getDate.date}`,
       `https://api.nasa.gov/insight_weather/?api_key=${this.key}&feedtype=json&ver=1.0`,
-      `https://api.nasa.gov/EPIC/api/natural/date/${this.getDate.date}?api_key=${this.key}`, //https://api.nasa.gov/EPIC/api/natural/images?api_key=DEMO_KEY//
+      `https://api.nasa.gov/EPIC/api/natural/date/2019-05-30?api_key=${this.key}`,
+      // `https://api.nasa.gov/EPIC/api/natural/date/${this.getDate.date}?api_key=${this.key}`, //https://api.nasa.gov/EPIC/api/natural/images?api_key=DEMO_KEY//
       `https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.getDate.startDate}&end_date=${this.getDate.endDate}&api_key=${this.key}`,
     ];
   }
