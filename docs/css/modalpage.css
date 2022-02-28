@@ -34,22 +34,27 @@ h3 {
   font-size: 20px;
   color: rgb(47, 45, 53);
 }
+header {
+  display: flex;
+  justify-content: center;
+}
 .header {
   width: 60%;
   margin-top: 10px;
   display: flex;
-  margin-left: 20%;
+  flex-wrap: wrap;
+
   padding: 20px 0 20px 0;
 }
 .left-header {
+  width: 500px;
   color: #a19ea8;
   text-decoration: none;
-  padding-right: 10px;
 }
 .right-header {
+  width: 390px;
   color: #a19ea8;
   text-decoration: none;
-  padding-right: 10px;
 }
 .in-header {
   padding-right: 10px;
@@ -87,7 +92,7 @@ h3 {
 .information-menu-text {
   width: 50px;
   line-height: 50px;
-  text-align: left;
+  vertical-align: top;
   display: inline-block;
   margin-left: 20px;
   color: #a19ea8;
@@ -230,4 +235,14 @@ input {
   margin: 10px 0 10px 0;
   width: 40px;
   height: 40px;
+}
+@media screen and (max-width: 900px) and (min-width: 200px) {
+  .header {
+    width: 100%;
+    margin-left: 0;
+  }
+  .app-information {
+    width: 100%;
+    margin-left: 0;
+  }
 }
