@@ -95,13 +95,13 @@ header {
   vertical-align: top;
   display: inline-block;
   margin-left: 20px;
-  color: #a19ea8;
+  color: rgb(161, 158, 168);
   width: 183px;
 }
 .progresstab-line {
   position: relative;
   opacity: 0.5;
-  margin-top: -270px;
+  margin-top: -280px;
   margin-left: 270px;
   height: 270px;
   width: 2px;
@@ -117,8 +117,10 @@ header {
   background-color: rgb(68, 219, 181);
 }
 .main-menu {
+  fill: rgb(68, 219, 181);
   display: inline-block;
-  width: 50%;
+  width: 500px;
+  height: 200px;
   text-align: center;
   position: relative;
   top: -320px;
