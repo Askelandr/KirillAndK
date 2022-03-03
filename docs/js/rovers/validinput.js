@@ -12,6 +12,7 @@ let input = document.forms[0].curiosity;
 let input1 = document.forms[1].opportunity;
 let input2 = document.forms[2].spirit;
 console.log(input, input2);
+
 input.onblur = function () {
   if (input.value % 1 != 0 || input.value === "") {
     errorCuriosity.style.opacity = 1;

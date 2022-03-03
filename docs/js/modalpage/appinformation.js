@@ -1,7 +1,7 @@
 "use strict";
 let elem = document.querySelector(".app-information");
 let menu = {
-  epic: `<svg style="fill:rgb(68, 219, 181);width: 200px;height: 200px;"class="main-icon" data-name="Layer 1" id="Layer_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  epic: `<svg class="svg-icon" data-name="Layer 1" id="Layer_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <title/>
   <path d="M16,29A13,13,0,1,1,29,16,13.015,13.015,0,0,1,16,29ZM16,5A11,11,0,1,0,27,16,11.013,11.013,0,0,0,16,5Z"/>
   <path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/>
@@ -10,7 +10,7 @@ let menu = {
   epicTitle: "Epic",
   epicText:
     "На этой странице вы найдете изображение нашей плнеты полученные с телескопа который находится на околоземной орбите. Фотографии загружаются непосредственно с сервера Nasa. Высокая детализация и качество изображения полностью соответствуют всем мировым стандартам",
-  fotoDay: `<svg style="fill:rgb(68, 219, 181);width: 200px;height: 200px;" class ="main-icon" viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
+  fotoDay: `<svg class ="svg-icon" viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 16C9.79213 16 9 16.8571 9 17.6957V43.3043C9 44.1429 9.79213 45 11 45H43.5C44.7079 45 45.5 44.1429 45.5 43.3043V17.6957C45.5 16.8571 44.7079 16 43.5 16H11ZM7 17.6957C7 15.5567 8.89416 14 11 14H43.5C45.6058 14 47.5 15.5567 47.5 17.6957V18.8275L51.2606 16.2193C52.5142 15.1284 54.1721 14.993 55.4969 15.486C56.8409 15.9863 58 17.2052 58 18.9137V41.637C58 43.3455 56.8409 44.5645 55.4969 45.0647C54.1721 45.5578 52.5142 45.4223 51.2606 44.3315L47.5 41.7232V43.3043C47.5 45.4433 45.6058 47 43.5 47H11C8.89416 47 7 45.4433 7 43.3043V17.6957ZM47.5 39.2933C47.5237 39.307 47.547 39.3218 47.5699 39.3377L52.5003 42.7573L52.5471 42.7993C53.1776 43.3659 54.0536 43.4678 54.7992 43.1903C55.5434 42.9133 56 42.3302 56 41.637V18.9137C56 18.2206 55.5434 17.6374 54.7992 17.3604C54.0536 17.0829 53.1776 17.1848 52.5471 17.7514L52.5003 17.7934L47.5699 21.213C47.547 21.2289 47.5237 21.2437 47.5 21.2574V39.2933Z" />
   <path fill-rule="evenodd" clip-rule="evenodd" d="M15 24.4167C15.5523 24.4167 16 24.8644 16 25.4167V33.25C16 34.3546 16.8954 35.25 18 35.25H19.1667C19.719 35.25 20.1667 35.6977 20.1667 36.25C20.1667 36.8023 19.719 37.25 19.1667 37.25H18C15.7909 37.25 14 35.4591 14 33.25V25.4167C14 24.8644 14.4477 24.4167 15 24.4167ZM22.5 24.4167C23.0523 24.4167 23.5 24.8644 23.5 25.4167V26.2833C23.5 26.8356 23.0523 27.2833 22.5 27.2833C21.9477 27.2833 21.5 26.8356 21.5 26.2833V25.4167C21.5 24.8644 21.9477 24.4167 22.5 24.4167ZM22.5 27.8833C23.0523 27.8833 23.5 28.331 23.5 28.8833V36.25C23.5 36.8023 23.0523 37.25 22.5 37.25C21.9477 37.25 21.5 36.8023 21.5 36.25V28.8833C21.5 28.331 21.9477 27.8833 22.5 27.8833Z" />
   <path fill-rule="evenodd" clip-rule="evenodd" d="M24.7293 24.0373C25.2609 23.8878 25.8131 24.1976 25.9627 24.7293L28.75 34.6398L31.5373 24.7293C31.6869 24.1976 32.2391 23.8878 32.7707 24.0373C33.3024 24.1869 33.6122 24.7391 33.4627 25.2707L30.6753 35.1813C30.1284 37.126 27.3716 37.126 26.8247 35.1813L24.0373 25.2707C23.8878 24.7391 24.1976 24.1869 24.7293 24.0373Z" />
@@ -18,8 +18,8 @@ let menu = {
   </svg>`,
   fotoDayTitle: "Фото дня",
   fotoDayText:
-    "На этой странице все наши посетители смогут посмотреть ФОТО ДНЯ, которое на соей странице в интернете ежедневно выкладывает NASA. Вы пропустили очередное фото? Не беда, просто введите дату которая вас интерисует и вы увидите то самое фото. Далекие галактики, туманности, планеты нашей солнечной системы и интересные места на нашей планете. Вы найдете очень много занимательной информации. ",
-  roverFoto: `<svg  style="fill:rgb(68, 219, 181)" class ="main-icon" viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
+    "На этой странице все наши посетители смогут посмотреть ФОТО ДНЯ, которое на соей странице в интернете ежедневно выкладывает NASA. Вы пропустили очередное фото? Далекие галактики, туманности, планеты нашей солнечной системы и интересные места на нашей планете. Вы найдете очень много занимательной информации. ",
+  roverFoto: `<svg class ="svg-icon" viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M10 43C10 41.8954 10.8954 41 12 41H19C20.1046 41 21 41.8954 21 43V55C21 56.1046 20.1046 57 19 57H12C10.8954 57 10 56.1046 10 55V43ZM19 43H12V55H19V43Z" />
   <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11C10 9.89543 10.8954 9 12 9H19C20.1046 9 21 9.89543 21 11V23C21 24.1046 20.1046 25 19 25H12C10.8954 25 10 24.1046 10 23V11ZM19 11H12V23L19 23V11Z" />
   <path fill-rule="evenodd" clip-rule="evenodd" d="M43 11C43 9.89543 43.8954 9 45 9H52C53.1046 9 54 9.89543 54 11V23C54 24.1046 53.1046 25 52 25H45C43.8954 25 43 24.1046 43 23V11ZM52 11H45V23L52 23V11Z" />
@@ -39,8 +39,8 @@ let menu = {
 </svg>`,
   roverFotoTitle: "Фото марсоходов",
   roverFotoText:
-    "Это, наверное, самая удивительная страница нашего сайта. Все дело в том, что у вас есть возможность посмотреть настоящие фотографии марсоходов. Давайте вспомним как их названия. Curiosity,Opportunity и конечно же Spirit. Фотографии выбираются на конкретный сол и с каждой камеры марсохода. Переходите на эту страницу и разберетесь.",
-  meteors: `<svg style="fill:rgb(68, 219, 181)"  class ="main-icon" viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
+    "Cамая удивительная страница нашего сайта. У вас есть возможность посмотреть фотографии марсоходов. Давайте вспомним их названия - Curiosity,Opportunity и конечно же Spirit. Фотографии выбираются на конкретный сол и с каждой камеры марсохода.",
+  meteors: `<svg class ="svg-icon" viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M34.7459 28.7388C32.1478 21.0549 25.9669 14.8599 18.2034 14.4075L18.3198 12.4109C27.1489 12.9254 33.8729 19.9129 36.6405 28.0982C39.413 36.2984 38.3362 46.0483 31.1601 52.2457L29.8529 50.732C36.2419 45.2144 37.3389 36.408 34.7459 28.7388Z" />
   <path fill-rule="evenodd" clip-rule="evenodd" d="M25.8996 53.4955C26.3223 54.8099 27.7305 55.5328 29.0449 55.1101C30.3593 54.6875 31.0822 53.2793 30.6596 51.9648C30.2369 50.6504 28.8287 49.9275 27.5143 50.3502C26.1999 50.7728 25.477 52.181 25.8996 53.4955ZM24.9476 53.8016C25.5394 55.6418 27.5108 56.6539 29.351 56.0621C31.1912 55.4704 32.2033 53.4989 31.6116 51.6587C31.0198 49.8185 29.0484 48.8064 27.2082 49.3982C25.368 49.9899 24.3559 51.9614 24.9476 53.8016Z" />
   <path fill-rule="evenodd" clip-rule="evenodd" d="M48.3999 41.8888C48.5649 42.1103 48.5191 42.4235 48.2976 42.5885L30.9246 55.5279C30.7032 55.6929 30.3899 55.6471 30.225 55.4256C30.06 55.2041 30.1058 54.8909 30.3273 54.7259L47.7003 41.7865C47.9217 41.6215 48.235 41.6673 48.3999 41.8888Z"/>
@@ -51,8 +51,8 @@ let menu = {
 </svg>`,
   meteorsTitle: "Астероиды",
   meteorsText:
-    "Это раздел нашего сайта подойдет тем, кто не любит красивые картинки, а предпочитает копаться в цифрах. На выбранные вами даты мы предоставим все околоземные объекты которые пролетят в непосредственной близости от земли. Вишенка на торте это оттельная фильтрация ОПАСНЫХ объектов. Дерзайте, это не так наглядно, Но тоже очень интересно.",
-  marsWeather: `<svg style="fill:rgb(68, 219, 181)" class ="main-icon" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    "Это раздел нашего сайта подойдет тем, кто не любит красивые картинки, а предпочитает копаться в цифрах. На выбранные вами даты мы предоставим все околоземные объекты которые пролетят в непосредственной близости от земли.",
+  marsWeather: `<svg class ="svg-icon" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g id="Layer_1"/>
   <g id="Capa_2">
       <g>
@@ -82,122 +82,81 @@ let menu = {
 </svg>`,
   marsWeatherTitle: "Погода на марсе",
   marsWeatherText:
-    "Посмотрите за окно. Дождь или солнце? Как вообще погодка. Если нет возможности посмотреть за окно, то несомненно, и по телевизору и в интернете можно всегда найти всю необходимую информацию. А что делать если надо узать погоду на Марсе? Все очень просто! Откройте соответствующий раздел нашей программы и вы узнаете всю необходимые данные на указанную дату. Вперед! Узнайте уже, есть ли жизнь на Марсе!",
+    "Посмотрите за окно. Дождь или солнце? Как вообще погодка. А что делать если надо узать погоду на Марсе? Все очень просто! Откройте соответствующий раздел нашей программы и вы узнаете всю необходимые данные на указанную дату. Вперед! Узнайте уже, есть ли жизнь на Марсе!",
 };
 
-let epic = document.querySelector(".epic");
-
+let epic = document.querySelector("#epic");
 let epicIcon = epic.querySelector(".icon");
-let fotoDay = document.querySelector(".foto-day");
+
+let fotoDay = document.querySelector("#foto-day");
 let fotoDayIcon = fotoDay.querySelector(".icon");
-let fotoDayText = fotoDay.querySelector(".information-menu-text");
-let roverFoto = document.querySelector(".rover-foto");
+
+let roverFoto = document.querySelector("#rover-foto");
 let roverFotoIcon = roverFoto.querySelector(".icon");
-let meteors = document.querySelector(".near-object");
+
+let meteors = document.querySelector("#near-object");
 let meteorsIcon = meteors.querySelector(".icon");
-let marsWeather = document.querySelector(".mars-weather");
+
+let marsWeather = document.querySelector("#mars-weather");
 let marsWeatherIcon = marsWeather.querySelector(".icon");
 
-epic.addEventListener("click", function (e) {
-  console.log(e.currentTarget.className);
-  fotoDayIcon.style.fill = "rgb(161,158,168)";
-  roverFotoIcon.style.fill = "rgb(161,158,168)";
-  marsWeatherIcon.style.fill = "rgb(161,158,168)";
-  meteorsIcon.style.fill = "rgb(161,158,168)";
-  epicIcon.style.fill = "rgb(68, 219, 181)";
-  let elemSlicker = document.querySelector(".progresstab-slicker");
-  elemSlicker.remove();
-  let slicker = document.createElement(`div`);
-  slicker.className = "progresstab-slicker";
-  epic.append(slicker);
-
-  let elemMenu = elem.querySelector(".svg-menu");
-  let elemTitle = elem.querySelector(".name");
-  let elemText = elem.querySelector(".menu-text");
-
-  elemMenu.innerHTML = menu.epic;
-  elemTitle.innerHTML = menu.epicTitle;
-  elemText.innerHTML = menu.epicText;
+epic.addEventListener("click", (e) => {
+  selectTab(e);
 });
-fotoDay.addEventListener("click", function (e) {
-  epicIcon.style.fill = "rgb(161,158,168)";
-  roverFotoIcon.style.fill = "rgb(161,158,168)";
-  meteorsIcon.style.fill = "rgb(161,158,168)";
-  marsWeatherIcon.style.fill = "rgb(161,158,168)";
-  fotoDayIcon.style.fill = "rgb(68, 219, 181)";
-  let elemSlicker = document.querySelector(".progresstab-slicker");
-  console.log(elemSlicker);
-  elemSlicker.remove();
-  let slicker = document.createElement(`div`);
-  slicker.className = "progresstab-slicker";
-  fotoDay.append(slicker);
-  let elemMenu = elem.querySelector(".svg-menu");
-  let elemTitle = elem.querySelector(".name");
-  let elemText = elem.querySelector(".menu-text");
-
-  elemMenu.innerHTML = menu.fotoDay;
-  elemTitle.innerHTML = menu.fotoDayTitle;
-  elemText.innerHTML = menu.fotoDayText;
+fotoDay.addEventListener("click", (e) => {
+  selectTab(e);
 });
-roverFoto.addEventListener("click", function (e) {
-  epicIcon.style.fill = "rgb(161,158,168)";
-  fotoDayIcon.style.fill = "rgb(161,158,168)";
-  meteorsIcon.style.fill = "rgb(161,158,168)";
-  marsWeatherIcon.style.fill = "rgb(161,158,168)";
-  roverFotoIcon.style.fill = "rgb(68, 219, 181)";
-  let elemSlicker = document.querySelector(".progresstab-slicker");
-  elemSlicker.remove();
-  let slicker = document.createElement(`div`);
-  slicker.className = "progresstab-slicker";
-  roverFoto.append(slicker);
-
-  let elemMenu = elem.querySelector(".svg-menu");
-  let elemTitle = elem.querySelector(".name");
-  let elemText = elem.querySelector(".menu-text");
-
-  elemMenu.innerHTML = menu.roverFoto;
-  elemTitle.innerHTML = menu.roverFotoTitle;
-  elemText.innerHTML = menu.roverFotoText;
+roverFoto.addEventListener("click", (e) => {
+  selectTab(e);
 });
-meteors.addEventListener("click", function (e) {
+meteors.addEventListener("click", (e) => {
+  selectTab(e);
+});
+marsWeather.addEventListener("click", (e) => {
+  selectTab(e);
+});
+
+function selectTab(e) {
   epicIcon.style.fill = "rgb(161,158,168)";
   fotoDayIcon.style.fill = "rgb(161,158,168)";
   roverFotoIcon.style.fill = "rgb(161,158,168)";
   marsWeatherIcon.style.fill = "rgb(161,158,168)";
-
-  meteorsIcon.style.fill = "rgb(68, 219, 181)";
-
-  let elemSlicker = document.querySelector(".progresstab-slicker");
-  elemSlicker.remove();
-  let slicker = document.createElement(`div`);
-  slicker.className = "progresstab-slicker";
-  meteors.append(slicker);
-
-  let elemMenu = elem.querySelector(".svg-menu");
-  let elemTitle = elem.querySelector(".name");
-  let elemText = elem.querySelector(".menu-text");
-
-  elemMenu.innerHTML = menu.meteors;
-  elemTitle.innerHTML = menu.meteorsTitle;
-  elemText.innerHTML = menu.meteorsText;
-});
-marsWeather.addEventListener("click", function (e) {
-  epicIcon.style.fill = "rgb(161,158,168)";
-  fotoDayIcon.style.fill = "rgb(161,158,168)";
-  roverFotoIcon.style.fill = "rgb(161,158,168)";
   meteorsIcon.style.fill = "rgb(161,158,168)";
-  marsWeatherIcon.style.fill = "rgb(68, 219, 181)";
+
   let elemSlicker = document.querySelector(".progresstab-slicker");
   elemSlicker.remove();
   let slicker = document.createElement(`div`);
   slicker.className = "progresstab-slicker";
-  marsWeather.append(slicker);
+  e.currentTarget.append(slicker);
 
   let elemMenu = elem.querySelector(".svg-menu");
   let elemTitle = elem.querySelector(".name");
-  let elemText = elem.querySelector(".menu-text");
+  let elemText = elem.querySelector(".in-menu-text");
 
-  elemMenu.innerHTML = menu.marsWeather;
-  elemTitle.innerHTML = menu.marsWeatherTitle;
-  elemText.innerHTML = menu.marsWeatherText;
-});
+  if (e.currentTarget.id === "epic") {
+    epicIcon.style.fill = "rgb(68, 219, 181)";
+    elemMenu.innerHTML = menu.epic;
+    elemTitle.innerHTML = menu.epicTitle;
+    elemText.innerHTML = menu.epicText;
+  } else if (e.currentTarget.id === "foto-day") {
+    fotoDayIcon.style.fill = "rgb(68, 219, 181)";
+    elemMenu.innerHTML = menu.fotoDay;
+    elemTitle.innerHTML = menu.fotoDayTitle;
+    elemText.innerHTML = menu.fotoDayText;
+  } else if (e.currentTarget.id === "rover-foto") {
+    roverFotoIcon.style.fill = "rgb(68, 219, 181)";
+    elemMenu.innerHTML = menu.roverFoto;
+    elemTitle.innerHTML = menu.roverFotoTitle;
+    elemText.innerHTML = menu.roverFotoText;
+  } else if (e.currentTarget.id === "near-object") {
+    meteorsIcon.style.fill = "rgb(68, 219, 181)";
+    elemMenu.innerHTML = menu.meteors;
+    elemTitle.innerHTML = menu.meteorsTitle;
+    elemText.innerHTML = menu.meteorsText;
+  } else {
+    marsWeatherIcon.style.fill = "rgb(68, 219, 181)";
+    elemMenu.innerHTML = menu.marsWeather;
+    elemTitle.innerHTML = menu.marsWeatherTitle;
+    elemText.innerHTML = menu.marsWeatherText;
+  }
+}
