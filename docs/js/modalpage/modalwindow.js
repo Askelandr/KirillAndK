@@ -7,15 +7,35 @@ let body = document.querySelector(".body");
 let clickButton = document.querySelector("#click-button");
 
 clickButton.addEventListener("click", (e) => {
-  console.log("Привет");
+  body.style.overflow = "hidden";
   let modalPage = document.createElement(`div`);
   modalPage.className = "modal-window";
   body.prepend(modalPage);
   let modalWindow = document.createElement(`div`);
   modalWindow.className = "modal";
   modalPage.append(modalWindow);
+
+  body.setAttribute("tabindex", "-1");
+  modalWindow.focus();
+
   let header = document.createElement(`h2`);
   header.className = "modal-header";
   modalWindow.append(header);
-  header.append(modalInfo.header);
+  header.innerHTML = modalInfo.header;
+
+  document.addEventListener("click", closeModal());
+  function closeModal() {
+    document.addEventListener("click", (e) => {
+      if (e.target === modalPage) {
+        modalPage.remove();
+        body.style.overflow = "";
+      }
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      modalPage.remove();
+      body.style.overflow = "";
+    }
+  });
 });
