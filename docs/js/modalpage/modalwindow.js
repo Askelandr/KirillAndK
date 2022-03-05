@@ -2,17 +2,23 @@
 let modalInfo = {
   header: "Получить приложение",
   text: "Для того что бы получить доступ к загрузке введите свое имя и email",
-  input: `<div class="modal-input">
+  input: `
+        <h6 class="modal-error" style=" opacity:0" id="name-error-text">Поле должно быть заполнено</h6>
+        <div class="modal-input"> 
             <div class="wrapper_inpt">
-                <input type="text" placeholder="Введите свое  имя">
+                <input type="text" id="input-get-name" placeholder="Введите свое  имя">
             </div>
+        </div>
+        <h6 class="modal-error" style=" opacity:0" id="email-error-text">Введен некорректный email</h6>
+        <div class="modal-input"> 
             <div class="wrapper_inpt">
-                <input type="text" placeholder="Введите свой email">
-                <div class="btn_area">
+                <input type="text" id="input-get-name" placeholder="Введите свой email">
+                <div class="btn_area" id="button-loading">
                     ЗАГРУЗКА
                 </div>
             </div>
-          </div>`,
+        </div>
+          `,
   button: "	&#10060",
 };
 let body = document.querySelector(".body");
@@ -20,9 +26,11 @@ let clickButton = document.querySelector("#click-button");
 
 clickButton.addEventListener("click", (e) => {
   body.style.overflow = "hidden";
+
   let modalPage = document.createElement(`div`);
   modalPage.className = "modal-window";
   body.prepend(modalPage);
+
   let modalWindow = document.createElement(`div`);
   modalWindow.className = "modal";
   modalPage.append(modalWindow);
@@ -46,6 +54,24 @@ clickButton.addEventListener("click", (e) => {
   button.innerHTML = modalInfo.button;
 
   document.addEventListener("click", closeModal());
+
+  let input = document.querySelector(".modal");
+  console.log(input);
+  let inputGetName = input.querySelector("#input-get-name");
+  let errorTextInput = input.querySelector("#name-error-text");
+  let battonLoading = input.querySelector("#button-loading");
+
+  battonLoading.addEventListener("click", (e) => {
+    if (inputGetName.value === "") {
+      errorTextInput.style.opacity = 1;
+    } else {
+      errorTextInput.style.opacity = 0;
+    }
+  });
+
+  if (e.value === "") {
+    errorTextInput.style.opacity = 1;
+  }
 
   modalWindow.addEventListener("click", (e) => {
     if (e.target.className === "modal-batton") {
