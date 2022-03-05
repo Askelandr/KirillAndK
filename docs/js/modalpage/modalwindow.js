@@ -6,13 +6,13 @@ let modalInfo = {
         <h6 class="modal-error" style=" opacity:0" id="name-error-text">Поле должно быть заполнено</h6>
         <div class="modal-input"> 
             <div class="wrapper_inpt">
-                <input type="text" id="input-get-name" placeholder="Введите свое  имя">
+                <input type="text" id="input-get-name" placeholder="Введите свое  имя" tabindex=1>
             </div>
         </div>
         <h6 class="modal-error" style=" opacity:0" id="email-error-text">Введен некорректный email</h6>
         <div class="modal-input"> 
             <div class="wrapper_inpt">
-                <input type="text" id="input-get-name" placeholder="Введите свой email">
+                <input type="email" id="input-get-email" placeholder="Введите свой email" tabindex=2>
                 <div class="btn_area" id="button-loading">
                     ЗАГРУЗКА
                 </div>
@@ -56,22 +56,33 @@ clickButton.addEventListener("click", (e) => {
   document.addEventListener("click", closeModal());
 
   let input = document.querySelector(".modal");
-  console.log(input);
+
   let inputGetName = input.querySelector("#input-get-name");
-  let errorTextInput = input.querySelector("#name-error-text");
+  let errorNameInput = input.querySelector("#name-error-text");
   let battonLoading = input.querySelector("#button-loading");
+  let inputGetEmail = input.querySelector("#input-get-email");
+  let errorEmailInput = input.querySelector("#email-error-text");
 
   battonLoading.addEventListener("click", (e) => {
-    if (inputGetName.value === "") {
-      errorTextInput.style.opacity = 1;
-    } else {
-      errorTextInput.style.opacity = 0;
-    }
-  });
+    let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+    let myMail = inputGetEmail.value;
+    let valid = re.test(myMail);
+    let i = 0;
 
-  if (e.value === "") {
-    errorTextInput.style.opacity = 1;
-  }
+    if (inputGetName.value === "") {
+      errorNameInput.style.opacity = 1;
+    } else {
+      i++;
+      errorNameInput.style.opacity = 0;
+    }
+    if (!valid) {
+      errorEmailInput.style.opacity = 1;
+    } else {
+      i++;
+      errorEmailInput.style.opacity = 0;
+    }
+    if (i === 2) modalPage.remove();
+  });
 
   modalWindow.addEventListener("click", (e) => {
     if (e.target.className === "modal-batton") {
