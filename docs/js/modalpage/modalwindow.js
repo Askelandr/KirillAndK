@@ -54,7 +54,6 @@ clickButton.addEventListener("click", (e) => {
   button.innerHTML = modalInfo.button;
 
   document.addEventListener("click", closeModal());
-
   let input = document.querySelector(".modal");
 
   let inputGetName = input.querySelector("#input-get-name");
@@ -63,7 +62,37 @@ clickButton.addEventListener("click", (e) => {
   let inputGetEmail = input.querySelector("#input-get-email");
   let errorEmailInput = input.querySelector("#email-error-text");
 
+  modalWindow.addEventListener("click", (e) => {
+    if (e.target.className === "modal-batton") {
+      modalPage.remove();
+      body.style.overflow = "";
+    }
+  });
   battonLoading.addEventListener("click", (e) => {
+    validAndClose();
+  });
+
+  function closeModal() {
+    document.addEventListener("click", (e) => {
+      if (e.target === modalPage) {
+        modalPage.remove();
+
+        body.style.overflow = "";
+      }
+    });
+  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      modalPage.remove();
+
+      body.style.overflow = "";
+    } else if (e.key === "Tab") {
+      e.preventDefault();
+    } else if (e.key === "Enter") {
+      validAndClose();
+    }
+  });
+  function validAndClose() {
     let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
     let myMail = inputGetEmail.value;
     let valid = re.test(myMail);
@@ -81,35 +110,8 @@ clickButton.addEventListener("click", (e) => {
       i++;
       errorEmailInput.style.opacity = 0;
     }
-    if (i === 2) modalPage.remove();
-  });
-
-  modalWindow.addEventListener("click", (e) => {
-    if (e.target.className === "modal-batton") {
+    if (i === 2) {
       modalPage.remove();
-      body.style.overflow = "";
     }
-  });
-
-  function closeModal() {
-    document.addEventListener("click", (e) => {
-      if (e.target === modalPage) {
-        modalPage.remove();
-
-        body.style.overflow = "";
-      }
-    });
   }
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      modalPage.remove();
-
-      body.style.overflow = "";
-    }
-  });
-  body.addEventListener("keydown", function (e) {
-    if (e.key === "Tab") {
-      e.preventDefault();
-    }
-  });
 });
