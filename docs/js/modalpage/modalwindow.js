@@ -35,7 +35,6 @@ clickButton.addEventListener("click", (e) => {
   modalWindow.className = "modal";
   modalPage.append(modalWindow);
 
-  modalWindow.focus();
   modalWindow.innerHTML = modalInfo.input;
 
   let text = document.createElement(`h3`);
@@ -57,6 +56,7 @@ clickButton.addEventListener("click", (e) => {
   let input = document.querySelector(".modal");
 
   let inputGetName = input.querySelector("#input-get-name");
+  inputGetName.focus();
   let errorNameInput = input.querySelector("#name-error-text");
   let battonLoading = input.querySelector("#button-loading");
   let inputGetEmail = input.querySelector("#input-get-email");
