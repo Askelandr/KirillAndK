@@ -33,7 +33,9 @@
       
     </header>
     <main>
-        <div class="image">
+        <div class="image" style="object-fit: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://b1.m24.ru/c/1289274.jpg);">
             <div class="in-image">
                 <h2><b>Приложение наблюдения за космосом</b></h2>
                 <h2 class="bold">Зведы ближе чем кажутся</h2>
@@ -166,23 +168,25 @@
                 
             </div>
         </div>
-        <div class="image">
+        <div class="image" style="object-fit: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://turkcemalumatlar.files.wordpress.com/2020/10/saturnwallpaper-saturnyildiziuydusu-karadelik-gunes.jpg?w=2048);">
+            
             <div class="in-image">
-                <h2><b>Приложение наблюдения за космосом</b></h2>
-                <h2 class="bold">Зведы ближе чем кажутся</h2>
+                <h2><b>Космос в одном клике</b></h2>
+                <h2 class="bold">Без остановки до ближайшей галактики</h2>
                 <h3>Представляем вашему вниманию прекрасный инструмент для 
                     наблюдения не только за звездным небом, но и за одной из
                      самых загадочных планет нашей солнечной системы</h3>
-                <button class="button">Читать далее</button>
+                <button class="button" id="click-button1">Читать далее</button>
             </div>
         </div>
         <div class="title">
             <div>
-                  <h2 class="name"><b>Изучите наши возможности</b></h2>
-                  <h3 style="color:#a19ea8">Преимущество нашего приложения
-                   в его простоте и наглядности. Интуитивно понятный интерфейс,
-                  постоянный контакт с пользователем и только самая актуальная
-                  информация получаемая непосредственно с сервера NASA</h3>
+                  <h2 class="name"><b>Все в одном месте</b></h2>
+                  <h3 style="color:#a19ea8">Красочные фото и увлекательная информация.
+                    Оставь в покое политику и Pornhab, у нас ты нашел то, что искал так долго.
+                    Садись поудобнее и начнем увлекательное путешествие.</h3>
             </div>
         </div>
         <div class="is-slider" id="slider1">
@@ -196,14 +200,16 @@
               <button class="right-button" value="right">&#187</button>
             </div>
         </div>
-        <div class="image">
+        <div class="image" style="object-fit: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://nationalvanguard.org/wp-content/uploads/2020/12/MARS_kolonizacja_5-1536x864.jpg);">
             <div class="in-image in-image-right">
-                <h2><b>Приложение наблюдения за космосом</b></h2>
-                <h2 class="bold">Зведы ближе чем кажутся</h2>
+                <h2><b>Красная планета</b></h2>
+                <h2 class="bold">Выбери свой маршрут</h2>
                 <h3>Представляем вашему вниманию прекрасный инструмент для 
                     наблюдения не только за звездным небом, но и за одной из
                      самых загадочных планет нашей солнечной системы</h3>
-                <button class="button">ЗАГРУКА</button>
+                <button class="button"id="click-button2">ЗАГРУКА</button>
             </div>
         </div>
         
@@ -222,10 +228,13 @@
         </div>
         <div class="before-footer">
             <h2 style="color: #a19ea8;text-align: center;padding-top: 20px;font-size: 15px;">&#9993 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Подпишитесь на наши новости</h2>
-            <div class="wrapper_inpt">
-                <input type="text" placeholder="Введите свой email">
-                <div class="btn_area">
-                  ПОДПИСКА
+            <div class="input-footer">
+                <h6 class="modal-error" style=" opacity:0" id="email-error-footer">Введен некорректный email</h6>
+                <div class="wrapper_inpt">
+                    <input type="text" placeholder="Введите свой email" id="input-footer">
+                    <div class="btn_area" id="btn-footer">
+                    ПОДПИСКА
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,11 +243,11 @@
         <div class="footer">
             <h4 style="padding-top: 20px;">Свяжитесь с нами в соцсетях</h4>
             <div>
-                <img class="icon-footer" src="./image/icon/net/facebook.png">
-                <img class="icon-footer"src="./image/icon/net/insta.png">
-                <img class="icon-footer" src="./image/icon/net/telegram.png">
-                <img class="icon-footer"src="./image/icon/net/vk.png">
-                <img class="icon-footer"src="./image/icon/net/whatsapp.png">
+                <a href="#"><img class="icon-footer" src="./image/icon/net/facebook.png"></a>
+                <a href="#"><img class="icon-footer"src="./image/icon/net/insta.png"></a>
+                <a href="#"><img class="icon-footer" src="./image/icon/net/telegram.png"></a>
+                <a href="#"><img class="icon-footer"src="./image/icon/net/vk.png"></a>
+                <a href="#"><img class="icon-footer"src="./image/icon/net/whatsapp.png"></a>
             </div>
             <div>
                 <span ><a href="./modalpage.html" class="left-header">Контакты</a></span
@@ -249,11 +258,15 @@
 
         </div>
     </footer>
-    <script src="js/modalpage/validationinput.js"></script>
+    
+    <!-- <script src="js/modalpage/validationinput.js"></script> -->
+    <script src="js/slider/slider.js"></script>
     <script src="js/modalpage/appinformation.js"></script>
     <script src="js/modalpage/personalopinion.js"></script>
     <script src="js/modalpage/modalwindow.js"></script>
+    <script src="js/modalpage/slaiderstart.js"></script>
     <script src="js/modalpage/validationinput.js"></script>
+    <script src="js/modalpage/stsrtmodal.js"></script>
     
   </body>
 </html>
