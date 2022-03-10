@@ -22,6 +22,7 @@ function startModalWindow(mainSelector, buttonSelector) {
                 `,
     button: "	&#10060",
   };
+
   let body = document.querySelector(mainSelector);
   let clickButton = document.querySelector(buttonSelector);
 
@@ -82,13 +83,14 @@ function startModalWindow(mainSelector, buttonSelector) {
         }
       });
     }
+    let counterTab = 0;
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
         modalPage.remove();
 
         body.style.overflow = "";
       } else if (e.key === "Tab") {
-        e.preventDefault();
+        inputGetName.focus();
       } else if (e.key === "Enter") {
         validAndClose();
       }
@@ -113,6 +115,7 @@ function startModalWindow(mainSelector, buttonSelector) {
       }
       if (i === 2) {
         modalPage.remove();
+        body.style.overflow = "";
       }
     }
   });

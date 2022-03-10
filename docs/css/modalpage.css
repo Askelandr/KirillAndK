@@ -269,7 +269,7 @@ input {
   height: 40px;
 }
 .modal-window {
-  position: absolute;
+  position: fixed;
   display: flex;
   top: 0;
   z-index: 2;
