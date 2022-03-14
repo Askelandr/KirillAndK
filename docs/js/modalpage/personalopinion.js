@@ -26,15 +26,9 @@ let chenge1 = el.querySelector("#chenge1");
 let chenge2 = el.querySelector("#chenge2");
 let chenge3 = el.querySelector("#chenge3");
 
-chenge1.addEventListener("click", (e) => {
-  selectPerson(e);
-});
-chenge2.addEventListener("click", (e) => {
-  selectPerson(e);
-});
-chenge3.addEventListener("click", (e) => {
-  selectPerson(e);
-});
+click(chenge1, selectPerson);
+click(chenge2, selectPerson);
+click(chenge3, selectPerson);
 
 function selectPerson(e) {
   chenge1.style.color = "#a19ea8";

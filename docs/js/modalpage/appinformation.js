@@ -100,21 +100,11 @@ let meteorsIcon = meteors.querySelector(".icon");
 let marsWeather = document.querySelector("#mars-weather");
 let marsWeatherIcon = marsWeather.querySelector(".icon");
 
-epic.addEventListener("click", (e) => {
-  selectTab(e);
-});
-fotoDay.addEventListener("click", (e) => {
-  selectTab(e);
-});
-roverFoto.addEventListener("click", (e) => {
-  selectTab(e);
-});
-meteors.addEventListener("click", (e) => {
-  selectTab(e);
-});
-marsWeather.addEventListener("click", (e) => {
-  selectTab(e);
-});
+click(epic, selectTab);
+click(fotoDay, selectTab);
+click(roverFoto, selectTab);
+click(meteors, selectTab);
+click(marsWeather, selectTab);
 
 function selectTab(e) {
   epicIcon.style.fill = "rgb(161,158,168)";

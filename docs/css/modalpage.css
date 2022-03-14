@@ -34,7 +34,7 @@ h3 {
   text-decoration: none;
   font-style: normal;
   font-size: 20px;
-  color: rgb(47, 45, 53);
+  color: rgb(97, 28, 124);
 }
 
 .header {
@@ -220,9 +220,9 @@ h3 {
   background-color: #e1e7e7;
 }
 /* Кнопка внизу */
-input:focus {
+/* input:focus {
   background-color: #e7f8eb;
-}
+} */
 .wrapper_inpt {
   /* margin-top: 30px; */
   margin-left: 35%;
@@ -268,6 +268,12 @@ input {
   width: 40px;
   height: 40px;
 }
+.input-footer {
+  margin-left: 25%;
+  text-align: center;
+  width: 40%;
+}
+/* Modal window */
 .modal-window {
   position: fixed;
   display: flex;
@@ -321,10 +327,6 @@ input {
   margin: 30px 0 5px 170px;
   color: crimson;
 }
-.input-footer {
-  margin-left: 25%;
-  text-align: center;
-  width: 40%;
-}
+
 /* @media screen and (max-width: 900px) and (min-width: 200px) {
 } */
